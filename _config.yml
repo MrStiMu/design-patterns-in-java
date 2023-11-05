@@ -1,7 +1,7 @@
 # -------------------
 # Jekyll Config
 # --------------------
-baseurl: "/design-patterns-in-java"
+baseurl: "/design-patterns-in-java/"
 url: "https://jekyll-origin.netlify.app"
 permalink: pretty
 markdown: kramdown
@@ -99,11 +99,11 @@ fonts:
   logo: "Schibsted Grotesk"
 
 logo:
-  logo_text: "Jekyll Origin"
-  logo_image: assets/images/logo/logo.svg
-  logo_image_mobile: assets/images/logo/logo-mobile.svg
-  logo_image_invert: assets/images/logo/logo-invert.svg
-  logo_image_invert_mobile: assets/images/logo/logo-invert-mobile.svg
+  logo_text: "Java Design Patterns"
+  logo_image: assets/images/logo/coffee-bean-logo.svg
+  logo_image_mobile: assets/images/logo/coffee-bean-logo.svg
+  logo_image_invert: assets/images/logo/coffee-bean-logo.svg
+  logo_image_invert_mobile: assets/images/logo/coffee-bean-logo.svg
   logo_image_desktop_height: "30px"
   logo_image_desktop_width: "30px"
   logo_image_mobile_height: "28px"
