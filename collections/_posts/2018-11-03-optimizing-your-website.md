@@ -4,7 +4,7 @@ title: "Optimizing Your Website"
 date: 2018-11-03T10:20:00Z
 categories: ["Development", "Web Design"]
 description: "Making sure your website runs fast and loads quickly is a fundamental part of the web design and seo process."
-thumbnail: "/assets/images/gen/blog/blog-2-thumbnail.webp"
+thumbnail: "/assets/images/gen/blog/singlton-thumbnail.png"
 image: "/assets/images/gen/blog/blog-2.webp"
 ---
 
