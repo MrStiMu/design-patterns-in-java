@@ -1,0 +1,136 @@
+.page-post {
+  .post-categories {
+    display: inline-flex;
+    font-size: 12px;
+    font-family: $font-family-base;
+    a {
+      color: var(--color-base-text);
+      padding: 4px 8px;
+      border-radius: 3px;
+      margin-right: 10px;
+      background-color: var(--color-base-bg-2);
+      &:hover {
+        text-decoration: none;
+        background-color: var(--color-base-bg-3);
+      }
+    }
+  }
+}
+.page-post-1 {
+  .post-header {
+    .post-date {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-base-text);
+    }
+    .post-authors {
+      display: flex;
+      flex-direction: row;
+      .author {
+        margin-right: 16px;
+      }
+    }
+    .post-title {
+      margin-top: 10px;
+      h1 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+    .post-description {
+      p {
+        color: var(--color-base-text-2);
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+    }
+    .post-image {
+      margin-top: 40px;
+      img {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+.page-post-2 {
+  .post-header {
+    .post-image {
+      margin-top: 0px;
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+      }
+    }
+    .post-title {
+      margin-top: 40px;
+      h1 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+    .post-description {
+      p {
+        color: var(--color-base-text-2);
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+    }
+    .post-date {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-base-text);
+    }
+    .post-authors {
+      margin-top: 20px;
+    }
+  }
+}
+.page-post-3 {
+  .post-header {
+    .post-image {
+      margin-top: 0;
+      margin-bottom: 40px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: $border-radius;
+      }
+    }
+    .post-title {
+      margin-top: 0;
+
+      h1 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+    .post-description {
+      p {
+        color: var(--color-base-text-2);
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
+    }
+    .post-date {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-base-text);
+    }
+    .post-authors {
+      margin-top: 20px;
+    }
+  }
+}
