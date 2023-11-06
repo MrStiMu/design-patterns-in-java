@@ -102,13 +102,13 @@ logo:
   logo_text: "Java Design Patterns"
   logo_image: assets/images/logo/coffee-bean-logo.svg
   logo_image_mobile: assets/images/logo/coffee-bean-logo.svg
-  logo_image_invert: assets/images/logo/coffee-bean-logo.svg
-  logo_image_invert_mobile: assets/images/logo/coffee-bean-logo.svg
+  logo_image_invert: assets/images/logo/coffee-bean-logo-inverted.svg
+  logo_image_invert_mobile: assets/images/logo/coffee-bean-logo-inverted.svg
   logo_image_desktop_height: "30px"
   logo_image_desktop_width: "30px"
   logo_image_mobile_height: "28px"
   logo_image_mobile_width: "28px"
-  show_logo_image_on_mobile: true
+  show_logo_image_on_mobile: false
   show_logo_image_on_desktop: true
   show_logo_text_on_mobile: false
   show_logo_text_on_desktop: true
@@ -141,7 +141,7 @@ analytics:
 
 comments:
   commento:
-    enabled: true # you must have a commento account and be on the correct domain. does not work locally.
+    enabled: false # you must have a commento account and be on the correct domain. does not work locally.
   disqus:
     shortname: "" # Your disqus shortcode for example "zerostatic". leave this blank ie "" to disable.
 
@@ -175,5 +175,5 @@ footer:
 bottom:
   enable_bottom: true # show/hide the entire bottom (below the footer)
   enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
-  copyright_text: "© 2023 Zerostatic Themes"
+  copyright_text: "© 2023 Java Design Patterns"
   show_rss_icon: true

@@ -1,12 +1,12 @@
 ---
 layout: home
 permalink: "/"
-title: "Java Design Patterns Hub"
+title: "The Ultimate Java Design Patterns Resource"
 description: "Crafting Elegant Code with Proven Java Design Patterns"
 image: "/assets/images/homepage2.png"
 show_social_media_in_title: true
-meta_title: Jekyll Origin
-meta_description: "Jekyll Origin is a premium Jekyll blog theme"
+meta_title: Java Design Pattern
+meta_description: "Explore JavaDesignPatterns.com for expert tutorials, in-depth guides, and practical examples on to implement Design Patterns In Java. Elevate your coding with our comprehensive resources tailored for beginner to advanced Java developers. Master the art of software design today"
 
 posts:
   heading: ""
