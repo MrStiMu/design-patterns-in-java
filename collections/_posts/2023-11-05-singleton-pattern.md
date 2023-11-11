@@ -15,6 +15,56 @@ The Singleton pattern is often used in situations where there is a need to limit
 
 Implementing the Singleton pattern in Java can be a bit tricky, as there are several different approaches that can be used. Some of the most common approaches include using a private constructor, a static method, and a static variable to store the instance of the class. While the Singleton pattern can be a powerful tool for managing resources and improving performance, it is important to use it judiciously and to consider the potential drawbacks, such as increased complexity and reduced flexibility.
 
+## Example
+
+Here's an example where a **Logger** class is implemented as a Singleton
+
+```Java
+public class Logger {
+    private static Logger instance;
+
+    // Private constructor to prevent instantiation from outside the class
+    private Logger() {}
+
+    // Public method to provide access to the single instance of the class
+    public static Logger getInstance() {
+        if (instance == null) {
+            instance = new Logger();
+        }
+        return instance;
+    }
+
+    // Other methods of the Logger class
+    public void log(String message) {
+        System.out.println("Log: " + message);
+    }
+}
+```
+In this example:
+
+- The **Logger** class has a private static instance variable to hold the single instance of the class.
+- The constructor is private to prevent instantiation from outside the class.
+- The **getInstance()** method is public and provides access to the single instance. If the instance doesn't exist, it creates one; otherwise, it returns the existing instance.
+
+Now, let's use the Logger in another class:
+
+```Java
+public class SomeClass {
+    public static void main(String[] args) {
+        // Get the instance of the Logger
+        Logger logger = Logger.getInstance();
+
+        // Use the logger to log messages
+        logger.log("This is a log message.");
+
+        // Since Logger is a singleton, calling getInstance() again will return the same instance
+        Logger anotherLogger = Logger.getInstance();
+        System.out.println("Are the instances the same? " + (logger == anotherLogger));
+    }
+}
+```
+In this example, even though we call **getInstance**() twice, it returns the same instance of the **Logger**. This ensures that there's only one Logger instance in the entire application, making it a useful pattern for managing shared resources or centralizing control over certain operations.
+
 ## Singleton Pattern Basics
 
 ### Definition
