@@ -19,7 +19,7 @@ Implementing the Singleton pattern in Java can be a bit tricky, as there are sev
 
 Here's an example where a **Logger** class is implemented as a Singleton
 
-```Java
+```java
 public class Logger {
     private static Logger instance;
 
@@ -48,7 +48,7 @@ In this example:
 
 Now, let's use the Logger in another class:
 
-```Java
+```java
 public class SomeClass {
     public static void main(String[] args) {
         // Get the instance of the Logger
