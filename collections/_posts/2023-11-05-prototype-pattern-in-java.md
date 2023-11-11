@@ -30,6 +30,76 @@ To implement the Prototype Pattern in Java, developers can use the clone() metho
 
 In summary, the Prototype Pattern is a creational design pattern that allows an object to create new instances of itself. It is part of the Gang of Four design patterns, and it is particularly useful in situations where creating new objects is resource-intensive. By using the Prototype Pattern, developers can save time and resources by copying an existing object rather than creating a new one from scratch.
 
+Example
+--------------------------
+Here's an example of how you can implement the Prototype Pattern in Java:
+
+```java
+// Step 1: Create a prototype interface
+interface Prototype {
+    Prototype clone();
+}
+
+// Step 2: Implement concrete prototypes
+class ConcretePrototype implements Prototype {
+    private String property;
+
+    public ConcretePrototype(String property) {
+        this.property = property;
+    }
+
+    @Override
+    public Prototype clone() {
+        // Create a new instance and copy the state
+        return new ConcretePrototype(this.property);
+    }
+
+    public String getProperty() {
+        return property;
+    }
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
+}
+
+// Step 3: Client code that uses the prototype
+public class PrototypeClient {
+    public static void main(String[] args) {
+        // Create a prototype instance
+        ConcretePrototype prototype = new ConcretePrototype("Initial State");
+
+        // Clone the prototype to create a new object
+        ConcretePrototype clonedObject = (ConcretePrototype) prototype.clone();
+
+        // Modify the state of the cloned object
+        clonedObject.setProperty("Modified State");
+
+        // Print the properties of both objects
+        System.out.println("Original Object Property: " + prototype.getProperty());
+        System.out.println("Cloned Object Property: " + clonedObject.getProperty());
+    }
+}
+```
+Explanation:
+
+**Prototype Interface (Prototype):** 
+* Declares a clone method that concrete prototypes must implement.
+
+**Concrete Prototype (ConcretePrototype):**
+
+* Implements the **Prototype** interface and provides a clone method.
+*  Has a property that represents the state of the object.
+
+**Client Code (PrototypeClient):**
+
+- Creates a prototype instance with an initial state.
+- Clones the prototype to create a new object.
+- Modifies the state of the cloned object.
+- Demonstrates that the original and cloned objects are separate instances with potentially different states.
+
+In this example, the **ConcretePrototype** class implements the **Prototype** interface and defines the clone method, allowing you to create a new instance with the same state. The client code creates a prototype, clones it, and then modifies the state of the cloned object independently of the original. This pattern is particularly useful when the cost of creating an object is high or when you want to create a new object with a similar state to an existing one.
+
 Java and Prototype Pattern
 --------------------------
 
