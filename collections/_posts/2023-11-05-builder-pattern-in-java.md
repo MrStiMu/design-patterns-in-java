@@ -17,6 +17,124 @@ The Builder pattern is particularly useful when dealing with objects that have a
 
 In Java, the Builder pattern is implemented using a separate Builder class that has methods for setting each parameter. The Builder class is then used to create the final object, which can be done in a single method call. This approach makes it easy to create complex objects with a large number of optional parameters, while also ensuring that the object is created in a consistent and efficient way.
 
+Example
+-------------------------------------
+
+Here's an example of the Builder Pattern in Java:
+
+```java
+// Step 1: Define the product (complex object)
+class Product {
+    private String part1;
+    private String part2;
+    private String part3;
+
+    public void setPart1(String part1) {
+        this.part1 = part1;
+    }
+
+    public void setPart2(String part2) {
+        this.part2 = part2;
+    }
+
+    public void setPart3(String part3) {
+        this.part3 = part3;
+    }
+
+    @Override
+    public String toString() {
+        return "Product { part1='" + part1 + "', part2='" + part2 + "', part3='" + part3 + "' }";
+    }
+}
+
+// Step 2: Define the builder interface
+interface Builder {
+    void buildPart1(String part1);
+    void buildPart2(String part2);
+    void buildPart3(String part3);
+    Product getResult();
+}
+
+// Step 3: Implement a concrete builder
+class ConcreteBuilder implements Builder {
+    private Product product = new Product();
+
+    @Override
+    public void buildPart1(String part1) {
+        product.setPart1(part1);
+    }
+
+    @Override
+    public void buildPart2(String part2) {
+        product.setPart2(part2);
+    }
+
+    @Override
+    public void buildPart3(String part3) {
+        product.setPart3(part3);
+    }
+
+    @Override
+    public Product getResult() {
+        return product;
+    }
+}
+
+// Step 4: Create a director to manage the construction process
+class Director {
+    public Product construct(Builder builder) {
+        builder.buildPart1("Part 1");
+        builder.buildPart2("Part 2");
+        builder.buildPart3("Part 3");
+        return builder.getResult();
+    }
+}
+
+// Step 5: Client code that uses the builder pattern
+public class BuilderClient {
+    public static void main(String[] args) {
+        // Create a concrete builder
+        Builder builder = new ConcreteBuilder();
+
+        // Create a director to manage the construction process
+        Director director = new Director();
+
+        // Construct the product using the builder
+        Product product = director.construct(builder);
+
+        // Display the result
+        System.out.println(product);
+    }
+}
+```
+Explanation:
+
+**Product (Product):**
+
+- Represents the complex object to be constructed.
+
+**Builder Interface (Builder):**
+
+- Declares the steps to build the product.
+
+**Concrete Builder (ConcreteBuilder):**
+
+- Implements the Builder interface and provides methods to build each part of the product.
+- Maintains a reference to the product being constructed.
+
+**Director (Director):**
+
+- Manages the construction process using a builder.
+- Guides the builder through the steps to build the product.
+
+**Client Code (BuilderClient):**
+
+- Creates a concrete builder.
+- Creates a director and uses it to construct a product through the builder.
+- Retrieves and displays the final product.
+
+In this example, the **Director** manages the construction process, and the **ConcreteBuilder** implements the steps to build each part of the Product. The client code interacts with the director to create a complex object step by step using the builder pattern.
+
 Understanding Builder Pattern in Java
 -------------------------------------
 
