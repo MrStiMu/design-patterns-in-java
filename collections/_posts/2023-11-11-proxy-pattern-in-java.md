@@ -1,17 +1,12 @@
 ---
 layout: post
 title: "Proxy Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to create a wrapper around the main object's complexity from the client. The proxy pattern is used when we need to represent an object located remotely. Talking to the real object might involve marshalling and unmarshalling of data and talking to the remote object."
 thumbnail: "/assets/images/gen/blog/proxy.png"
 image: "/assets/images/gen/blog/proxy.png"
 ---
-
-Proxy Design Pattern In Java: A Comprehensive Guide
-===================================================
-
-The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to create a wrapper around the main object's complexity from the client. The proxy pattern is used when we need to represent an object located remotely. Talking to the real object might involve marshalling and unmarshalling of data and talking to the remote object.
 
 In Java, the Proxy Design Pattern is used extensively in various frameworks and libraries to provide a layer of abstraction between the client and the actual implementation. It is used to implement various features such as security, caching, and lazy loading. The proxy pattern is also used to reduce the cost associated with creating fully initialized original objects.
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Observer Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Observer Design Pattern is a popular behavioral design pattern used in Java. It allows objects to communicate with each other and stay updated on changes in each other's state. This pattern is part of the Gang of Four design patterns, a collection of essential design patterns in software engineering."
 thumbnail: "/assets/images/gen/blog/observer.png"
 image: "/assets/images/gen/blog/observer-2.png"
 ---
@@ -63,10 +63,6 @@ To avoid this problem, developers should make sure to remove listeners from the 
 Another issue with the Observer Design Pattern is that it can lead to tightly coupled code. This happens when the observable and the observers have direct references to each other. This can make it difficult to change the code later on. To avoid this, developers should use a loosely coupled approach, where the observable and the observers communicate through a notification method.
 
 The Observer Design Pattern has also been deprecated in Java 9. Instead, developers should use the publish-subscribe pattern, which provides a more flexible and scalable approach to managing events. There are also several frameworks available that support the publish-subscribe pattern, such as Spring and Apache Kafka.
-
-Below is a class diagram for the Observer Design Pattern:
-
-![Observer Design Pattern Class Diagram](https://www.baeldung.com/wp-content/uploads/2018/06/ObserverClassDiagram.png)
 
 In summary, while the Observer Design Pattern has been widely used in Java applications, it has some issues that developers should be aware of. To avoid memory leaks and tightly coupled code, developers should remove listeners when they are no longer needed, use weak references, and use a mediator to manage communication between the observable and the observers. Additionally, developers should consider using the publish-subscribe pattern and frameworks that support it.
 
