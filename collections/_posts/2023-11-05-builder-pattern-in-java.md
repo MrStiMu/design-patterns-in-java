@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
+title: "Builder Pattern in Java: A Comprehensive Guide"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Builder pattern is a creational design pattern that is widely used in Java. It allows developers to create complex objects step by step, without having to create multiple constructors with different parameters. By using the Builder pattern, developers can create objects with a large number of optional parameters in a more efficient and consistent way."
 thumbnail: "/assets/images/gen/blog/builder.png"
 image: "/assets/images/gen/blog/builder-2.png"
 ---
 
-Builder Pattern in Java: Simplifying Object Creation
+Introduction
 ====================================================
 
 The Builder pattern is a creational design pattern that is widely used in Java. It allows developers to create complex objects step by step, without having to create multiple constructors with different parameters. By using the Builder pattern, developers can create objects with a large number of optional parameters in a more efficient and consistent way.

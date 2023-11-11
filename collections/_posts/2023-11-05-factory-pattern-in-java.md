@@ -1,17 +1,15 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
+title: "Factory Pattern in Java: A Comprehensive Guide"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Factory Pattern is a well-known creational design pattern used in software development to create objects without specifying the exact class of object that will be created. In Java, the Factory Pattern is implemented using either the Factory Method or the Abstract Factory pattern. The Factory Method pattern involves defining an interface for creating objects, but allowing subclasses to decide which class to instantiate. The Abstract Factory pattern involves creating a factory of factories, where each factory is responsible for creating objects of a particular type."
 thumbnail: "/assets/images/gen/blog/factory.png"
 image: "/assets/images/gen/blog/factory-2.png"
 ---
 
 Factory Pattern in Java: A Comprehensive Guide
 ==============================================
-
-The Factory Pattern is a well-known creational design pattern used in software development to create objects without specifying the exact class of object that will be created. In Java, the Factory Pattern is implemented using either the Factory Method or the Abstract Factory pattern. The Factory Method pattern involves defining an interface for creating objects, but allowing subclasses to decide which class to instantiate. The Abstract Factory pattern involves creating a factory of factories, where each factory is responsible for creating objects of a particular type.
 
 The Factory Pattern is widely used in Java programming due to its ability to separate the construction of objects from their use. This separation allows for greater flexibility and modularity in code, making it easier to maintain and update. Additionally, by using the Factory Pattern, developers can reduce code duplication and improve code readability, making it easier for others to understand and work with the codebase.
 

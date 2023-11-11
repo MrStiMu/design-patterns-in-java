@@ -1,17 +1,14 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
+title: "Abstract Factory Pattern in Java: A Comprehensive Guide"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Abstract Factory Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is used when a system needs to be independent of how its objects are created and composed. It encapsulates a group of individual factories that have a common theme."
 thumbnail: "/assets/images/gen/blog/abstract-factory.png"
 image: "/assets/images/gen/blog/abstract-factory.png"
 ---
 
-Abstract Factory Pattern in Java: A Comprehensive Guide
-=======================================================
-
-The Abstract Factory Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is used when a system needs to be independent of how its objects are created and composed. It encapsulates a group of individual factories that have a common theme.
+## Introduction
 
 In Java, the Abstract Factory Pattern is implemented using interfaces and abstract classes. The Abstract Factory Pattern is similar to the Factory Method Pattern in that both patterns are creational and both use interfaces and abstract classes. However, the Abstract Factory Pattern is used to create families of objects, while the Factory Method Pattern is used to create individual objects.
 

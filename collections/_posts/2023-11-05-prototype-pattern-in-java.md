@@ -1,17 +1,15 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
+title: "Prototype Pattern in Java: A Comprehensive Guide"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Prototype pattern is a creational design pattern that allows developers to create new objects by copying an existing instance, known as the prototype. This pattern is particularly useful when creating objects is a time-consuming and costly operation. By copying an existing object, developers can create new objects quickly and efficiently."
 thumbnail: "/assets/images/gen/blog/prototype.png"
 image: "/assets/images/gen/blog/prototype-2.png"
 ---
 
-Prototype Pattern in Java: A Comprehensive Guide
+Introduction
 ================================================
-
-The Prototype pattern is a creational design pattern that allows developers to create new objects by copying an existing instance, known as the prototype. This pattern is particularly useful when creating objects is a time-consuming and costly operation. By copying an existing object, developers can create new objects quickly and efficiently.
 
 In Java, the Prototype pattern is implemented using the clone() method. This method creates a new object with the same properties as the original object. By modifying the properties of the new object, developers can create a unique instance without having to create a new object from scratch. The Prototype pattern can be used to create complex objects that would be difficult or impossible to create otherwise.
 

@@ -1,17 +1,15 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
+title: "Overview of All the Gang of Four Design Patterns"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Gang of Four (GoF) design patterns are a set of 23 software design patterns that were introduced in the book 'Design Patterns: Elements of Reusable Object-Oriented Software' by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. These patterns are widely used in software development and are categorized into three main groups: Creational Patterns, Structural Patterns, and Behavioral Patterns."
 thumbnail: "/assets/images/gen/blog/overview.png"
 image: "/assets/images/gen/blog/overview-2.png"
 ---
 
-Overview of All the Gang of Four Design Patterns: A Comprehensive Guide
+Introduction
 =======================================================================
-
-The Gang of Four (GoF) design patterns are a set of 23 software design patterns that were introduced in the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. These patterns are widely used in software development and are categorized into three main groups: Creational Patterns, Structural Patterns, and Behavioral Patterns.
 
 The book "Design Patterns: Elements of Reusable Object-Oriented Software" is considered a classic in the field of software engineering and has been a valuable resource for developers for many years. The Gang of Four patterns described in the book provide solutions to common software design problems and are designed to be reusable across different projects and applications.
 
