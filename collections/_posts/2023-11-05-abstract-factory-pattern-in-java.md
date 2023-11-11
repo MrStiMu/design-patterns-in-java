@@ -14,6 +14,125 @@ In Java, the Abstract Factory Pattern is implemented using interfaces and abstra
 
 The Abstract Factory Pattern is useful in situations where an application needs to be able to switch between different families of objects without changing the code that uses them. For example, if an application uses a database, it might need to switch between different database drivers depending on the type of database being used. The Abstract Factory Pattern can be used to encapsulate the creation of these different drivers, making it easy to switch between them without changing the code that uses them.
 
+Example
+--------------------------------------
+Here's an example of the Abstract Factory Pattern in Java:
+
+```java
+// Step 1: Define abstract product interfaces
+interface Button {
+    void display();
+}
+
+interface TextField {
+    void display();
+}
+
+// Step 2: Create concrete product classes
+class WindowsButton implements Button {
+    @Override
+    public void display() {
+        System.out.println("Windows Button");
+    }
+}
+
+class WindowsTextField implements TextField {
+    @Override
+    public void display() {
+        System.out.println("Windows Text Field");
+    }
+}
+
+class MacButton implements Button {
+    @Override
+    public void display() {
+        System.out.println("Mac Button");
+    }
+}
+
+class MacTextField implements TextField {
+    @Override
+    public void display() {
+        System.out.println("Mac Text Field");
+    }
+}
+
+// Step 3: Define abstract factory interface
+interface GUIFactory {
+    Button createButton();
+    TextField createTextField();
+}
+
+// Step 4: Create concrete factory classes
+class WindowsFactory implements GUIFactory {
+    @Override
+    public Button createButton() {
+        return new WindowsButton();
+    }
+
+    @Override
+    public TextField createTextField() {
+        return new WindowsTextField();
+    }
+}
+
+class MacFactory implements GUIFactory {
+    @Override
+    public Button createButton() {
+        return new MacButton();
+    }
+
+    @Override
+    public TextField createTextField() {
+        return new MacTextField();
+    }
+}
+
+// Step 5: Client code that uses the abstract factory
+public class AbstractFactoryClient {
+    public static void main(String[] args) {
+        // Choose a concrete factory based on the desired platform (Windows or Mac)
+        GUIFactory factory = new WindowsFactory(); // Change to MacFactory to switch platforms
+
+        // Use the factory to create products
+        Button button = factory.createButton();
+        TextField textField = factory.createTextField();
+
+        // Display the created products
+        button.display();
+        textField.display();
+    }
+}
+```
+
+Explanation:
+
+**Abstract Product Interfaces (Button and TextField):**
+
+- Declare interfaces for the products of a family.
+
+**Concrete Product Classes (WindowsButton, WindowsTextField, MacButton, MacTextField):**
+
+- Implement the interfaces to create concrete products for each family.
+
+**Abstract Factory Interface (GUIFactory):**
+
+- Declares methods for creating the products of a family.
+
+**Concrete Factory Classes (WindowsFactory and MacFactory):**
+
+- Implement the abstract factory interface to create concrete products for a specific family.
+
+**Client Code (AbstractFactoryClient):**
+
+- Chooses a concrete factory based on the desired platform (Windows or Mac).
+- Uses the factory to create products (button and text field).
+- Displays the created products.
+
+In this example, the AbstractFactoryClient chooses between a WindowsFactory and a MacFactory to create a family of products (button and text field) that are compatible with each other. The client code remains independent of the specific classes of the created products, promoting flexibility and ensuring that the products are from the same family.
+
+
+
 Understanding Abstract Factory Pattern
 --------------------------------------
 
