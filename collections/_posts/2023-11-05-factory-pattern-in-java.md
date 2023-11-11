@@ -30,6 +30,87 @@ In Java, the Factory Pattern is widely used in frameworks such as Spring and Hib
 
 Overall, the Factory Pattern is a powerful tool in Java programming that can help developers create flexible and extensible systems. By encapsulating the object creation process, the Factory Pattern allows for more maintainable and reusable code.
 
+Example
+----------------------------------
+There are several variations of the Factory Pattern, and here is an example of the simple Factory Pattern:
+
+```java
+// Step 1: Define a common interface for products
+interface Product {
+    void create();
+}
+
+// Step 2: Implement concrete products
+class ConcreteProduct1 implements Product {
+    @Override
+    public void create() {
+        System.out.println("Creating Concrete Product 1");
+    }
+}
+
+class ConcreteProduct2 implements Product {
+    @Override
+    public void create() {
+        System.out.println("Creating Concrete Product 2");
+    }
+}
+
+// Step 3: Create a simple factory class
+class ProductFactory {
+    // Factory method to create products based on a type
+    public Product createProduct(String type) {
+        if ("1".equals(type)) {
+            return new ConcreteProduct1();
+        } else if ("2".equals(type)) {
+            return new ConcreteProduct2();
+        } else {
+            throw new IllegalArgumentException("Invalid product type");
+        }
+    }
+}
+
+// Step 4: Client code that uses the factory
+public class FactoryClient {
+    public static void main(String[] args) {
+        // Create a product factory
+        ProductFactory factory = new ProductFactory();
+
+        // Create products using the factory
+        Product product1 = factory.createProduct("1");
+        Product product2 = factory.createProduct("2");
+
+        // Use the created products
+        product1.create();
+        product2.create();
+    }
+}
+```
+Explanation:
+
+**Product Interface (Product):**
+
+- Declares the common interface for all concrete products.
+
+**Concrete Products (ConcreteProduct1 and ConcreteProduct2):**
+
+- Implement the Product interface and define their specific behavior.
+
+**Product Factory (ProductFactory):**
+
+- Contains a factory method (createProduct) that creates products based on a type parameter.
+- The client code interacts with the factory to create products without having to know the concrete classes.
+
+**Client Code (FactoryClient):**
+
+- Creates a ProductFactory.
+- Uses the factory to create specific products based on their types.
+- Interacts with the created products through the common interface.
+
+In this example, the **ProductFactory** encapsulates the creation logic, and the client code uses it to create products without directly instantiating concrete product classes. The Factory Pattern allows for flexibility by centralizing the creation process and decoupling the client code from the specific classes being instantiated.
+
+
+
+
 Core Components of Factory Pattern
 ----------------------------------
 
