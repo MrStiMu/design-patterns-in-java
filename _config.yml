@@ -2,7 +2,7 @@
 # Jekyll Config
 # --------------------
 baseurl: ""
-url: "https://jekyll-origin.netlify.app"
+url: "https://www.javadesignpatterns.com"
 permalink: pretty
 markdown: kramdown
 highlighter: rouge
