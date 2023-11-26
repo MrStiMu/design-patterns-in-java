@@ -1,15 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Adapter Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Adapter Design Pattern is a structural pattern that enables incompatible interfaces to work together. It is a popular design pattern used in Java programming. The Adapter Design Pattern in Java acts as a bridge between two unrelated interfaces, allowing them to work together seamlessly."
 thumbnail: "/assets/images/gen/blog/adapter.png"
-image: "/assets/images/gen/blog/singleton.png"
+image: "/assets/images/gen/blog/adapter-2.png"
 ---
-
-Adapter Design Pattern in Java: A Comprehensive Guide
-=====================================================
 
 The Adapter Design Pattern is a structural pattern that enables incompatible interfaces to work together. It is a popular design pattern used in Java programming. The Adapter Design Pattern in Java acts as a bridge between two unrelated interfaces, allowing them to work together seamlessly.
 
@@ -45,18 +42,6 @@ The Adapter Pattern is useful in scenarios where a client requires an interface 
 
 Overall, the Adapter Pattern is a powerful tool in Java for making incompatible interfaces work together. It enables classes with different interfaces to collaborate, making it easier to reuse existing code and improve the overall design of a system.
 
-Interface and Classes in Java
------------------------------
-
-In Java, an interface is a collection of abstract methods that define a set of behaviors that a class can implement. It is a contract that specifies what a class should do, but not how it should do it. Interfaces are useful for defining a common behavior that can be implemented by different classes.
-
-On the other hand, a class is a blueprint for creating objects that have properties and behaviors. A class can inherit properties and behaviors from another class, which is known as inheritance. In Java, a class can implement one or more interfaces, which means it must provide an implementation for all the methods defined in the interface.
-
-The Adapter Design Pattern in Java uses interfaces to provide a common way for two incompatible classes to work together. The pattern involves creating a new class that acts as a bridge between the two incompatible classes. The new class implements the interface of one class and delegates the calls to the other class. This allows the two classes to work together without modifying their code.
-
-In Java, interfaces are used extensively to define contracts for different parts of the system. For example, the Java Collections Framework defines a set of interfaces that define the behavior of different types of collections, such as lists, sets, and maps. By defining a common set of methods, the framework allows different types of collections to be used interchangeably.
-
-In summary, interfaces and classes are fundamental building blocks in Java programming. Interfaces define a set of behaviors that a class can implement, while classes provide a blueprint for creating objects with properties and behaviors. The Adapter Design Pattern in Java uses interfaces to provide a common way for two incompatible classes to work together.
 
 Class and Object Adapters
 -------------------------
@@ -78,29 +63,6 @@ One of the advantages of the Object Adapter is that it can adapt the behavior of
 Both Class Adapter and Object Adapter can be used to adapt the behavior of a class to match the behavior expected by the client. The Class Adapter pattern is more suitable when the Adaptee's behavior needs to be overridden, while the Object Adapter pattern is more suitable when the Adaptee's behavior needs to be adapted without breaking it.
 
 In summary, the Class Adapter and Object Adapter are two ways to implement the Adapter Design Pattern in Java. Both approaches produce the same result, but they differ in the way they achieve it. The Class Adapter uses Java inheritance, while the Object Adapter uses Java Composition. The Class Adapter is more suitable when the Adaptee's behavior needs to be overridden, while the Object Adapter is more suitable when the Adaptee's behavior needs to be adapted without breaking it.
-
-Inheritance and Composition in Java
------------------------------------
-
-Inheritance and composition are two of the fundamental concepts of object-oriented programming. Both concepts help to reuse code and establish relationships between classes.
-
-### Inheritance
-
-Inheritance is a mechanism in Java that allows a class to inherit properties and behaviors from another class. The class that is being inherited from is called the superclass, while the class that is inheriting is called the subclass. The subclass can access all the public and protected methods and fields of the superclass. Inheritance is denoted by the keyword `extends`.
-
-### Composition
-
-Composition is another way to establish a relationship between classes in Java. In composition, a class contains an instance of another class as one of its fields. The class that contains the instance is called the composite class, while the class that is being contained is called the component class. Composition is denoted by declaring an instance of the component class as a field in the composite class.
-
-### Differences between Inheritance and Composition
-
-The main difference between inheritance and composition is that inheritance establishes an "is-a" relationship between the classes, while composition establishes a "has-a" relationship. Inheritance is used when the subclass is a more specialized version of the superclass, while composition is used when the composite class needs to use the functionality of the component class.
-
-Inheritance can lead to tight coupling between the superclass and the subclass, making the code more difficult to maintain. On the other hand, composition allows for more flexibility and can lead to looser coupling between the composite class and the component class.
-
-### Conclusion
-
-Both inheritance and composition are important concepts in Java and can be used to establish relationships between classes. The choice between inheritance and composition depends on the specific use case and the relationship between the classes.
 
 Client, Target, and Adaptee
 ---------------------------
@@ -153,6 +115,7 @@ To implement the Adapter pattern in Java, follow these steps:
 
 Here is an example of implementing the Adapter pattern in Java:
 
+```java
     public interface Target {
         public void request();
     }
@@ -180,11 +143,67 @@ Here is an example of implementing the Adapter pattern in Java:
             target.request();
         }
     }
-
+```
 
 In this example, the `Target` interface is defined as the interface that the client code expects to use. The `Adaptee` interface is defined as the interface that the Adapter class will adapt to the target interface. The `Adapter` class implements the `Target` interface and adapts the methods of the `Adaptee` interface to the `Target` interface. The `Client` class instantiates the `Adapter` class and uses it to call the methods of the `Target` interface.
 
 Overall, the Adapter pattern is a useful design pattern for connecting two incompatible interfaces. In Java, the Adapter pattern can be easily implemented by creating a class that acts as a bridge between two incompatible interfaces.
+
+Additional Example
+-----------------------------
+Here's a simple example of the Adapter pattern in Java. Let's consider a scenario where we have a legacy system that works with a LegacyRectangle class, but we want to use a new Rectangle interface in our client code. The adapter will allow us to make the LegacyRectangle work with the new interface:
+
+```java
+// Target interface
+interface Rectangle {
+    void draw();
+}
+
+// Adaptee - LegacyRectangle
+class LegacyRectangle {
+    void drawLegacy() {
+        System.out.println("LegacyRectangle: Drawing a rectangle");
+    }
+}
+
+// Adapter
+class LegacyRectangleAdapter implements Rectangle {
+    private LegacyRectangle legacyRectangle;
+
+    public LegacyRectangleAdapter(LegacyRectangle legacyRectangle) {
+        this.legacyRectangle = legacyRectangle;
+    }
+
+    @Override
+    public void draw() {
+        legacyRectangle.drawLegacy();
+    }
+}
+
+// Client
+public class AdapterPatternExample {
+    public static void main(String[] args) {
+        // Using the new Rectangle interface
+        Rectangle rectangle = new Rectangle() {
+            @Override
+            public void draw() {
+                System.out.println("Rectangle: Drawing a rectangle");
+            }
+        };
+
+        // Using the LegacyRectangle with the help of the adapter
+        LegacyRectangle legacyRectangle = new LegacyRectangle();
+        Rectangle legacyRectangleAdapter = new LegacyRectangleAdapter(legacyRectangle);
+
+        // Drawing rectangles
+        rectangle.draw();
+        legacyRectangleAdapter.draw();
+    }
+}
+```
+In this example, the Rectangle interface is the target interface, and LegacyRectangle is the Adaptee with a legacy method (drawLegacy). The LegacyRectangleAdapter acts as the adapter, implementing the Rectangle interface and delegating the call to the legacy method of LegacyRectangle. This allows the legacy class to work with the new interface.
+
+The client code can then use the Rectangle interface uniformly, whether it's a new implementation or an adapted legacy implementation. This pattern is particularly useful when integrating new code with existing systems or libraries.
 
 Java Packages and Class Diagrams
 --------------------------------
@@ -243,19 +262,19 @@ In conclusion, the Adapter Pattern is a powerful design pattern that can be used
 Related Design Patterns
 -----------------------
 
-The Adapter Design Pattern is one of the many design patterns that can be used to solve specific problems when developing software. There are several other design patterns that are related to the Adapter Pattern, and understanding them can help you choose the right pattern for your specific use case.
+The Adaptor Design Pattern is one of the many design patterns that can be used to solve specific problems when developing software. There are several other design patterns that are related to the Adapter Pattern, and understanding them can help you choose the right pattern for your specific use case.
 
 ### Decorator Pattern
 
-The Decorator Pattern is another structural pattern that allows you to add functionality to an object dynamically. Unlike the Adapter Pattern, which focuses on adapting one interface to another, the Decorator Pattern focuses on adding behavior to an object without changing its interface. This pattern is useful when you want to add functionality to an object without subclassing it.
+The [Decorator Pattern]({% link _posts/2023-11-26-decorator-pattern-in-java.md %}) is another structural pattern that allows you to add functionality to an object dynamically. Unlike the Adapter Pattern, which focuses on adapting one interface to another, the Decorator Pattern focuses on adding behavior to an object without changing its interface. This pattern is useful when you want to add functionality to an object without subclassing it.
 
 ### Facade Pattern
 
-The Facade Pattern is a structural pattern that provides a simplified interface to a complex subsystem. The Facade Pattern is similar to the Adapter Pattern in that it provides a bridge between two interfaces. However, the Facade Pattern is used to simplify a complex subsystem, while the Adapter Pattern is used to adapt one interface to another.
+The [Facade Pattern]({% link _posts/2023-11-26-facade-pattern-in-java.md %}) is a structural pattern that provides a simplified interface to a complex subsystem. The Facade Pattern is similar to the Adapter Pattern in that it provides a bridge between two interfaces. However, the Facade Pattern is used to simplify a complex subsystem, while the Adapter Pattern is used to adapt one interface to another.
 
 ### Other Design Patterns
 
-There are many other design patterns that can be used in conjunction with the Adapter Pattern to solve specific problems. For example, the Bridge Pattern is a structural pattern that separates an abstraction from its implementation, allowing them to vary independently. The Proxy Pattern is a structural pattern that provides a surrogate or placeholder for another object to control access to it. Finally, the Composite Pattern is a structural pattern that allows you to treat a group of objects as a single object.
+There are many other design patterns that can be used in conjunction with the Adapter Pattern to solve specific problems. For example, the [Bridge Pattern]({% link _posts/2023-11-26-bridge-pattern-in-java.md %}) is a structural pattern that separates an abstraction from its implementation, allowing them to vary independently. The [Proxy Pattern]({% link _posts/2023-11-11-proxy-pattern-in-java.md %}) is a structural pattern that provides a surrogate or placeholder for another object to control access to it. Finally, the [Composite Pattern]({% link _posts/2023-11-26-composite-pattern-in-java.md %}) is a structural pattern that allows you to treat a group of objects as a single object.
 
 Overall, understanding the different design patterns and how they relate to each other can help you choose the right pattern for your specific use case. By using the right pattern, you can write more maintainable and scalable code that is easier to understand and modify.
 
