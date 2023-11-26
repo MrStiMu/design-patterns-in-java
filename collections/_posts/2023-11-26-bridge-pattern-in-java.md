@@ -1,34 +1,16 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Bridge Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Bridge design pattern is one of the most commonly used design patterns in Java programming. It is a structural design pattern that decouples an abstraction from its implementation so that both can vary independently. The Bridge pattern is used when there is a need to separate an abstraction from its implementation, allowing them to evolve independently. This pattern is particularly useful when dealing with large and complex software systems that require a high degree of flexibility and scalability."
 thumbnail: "/assets/images/gen/blog/bridge.png"
 image: "/assets/images/gen/blog/bridge.png"
 ---
 
-Bridge Design Pattern in Java: A Comprehensive Guide
-====================================================
-
-The Bridge design pattern is one of the most commonly used design patterns in Java programming. It is a structural design pattern that decouples an abstraction from its implementation so that both can vary independently. The Bridge pattern is used when there is a need to separate an abstraction from its implementation, allowing them to evolve independently. This pattern is particularly useful when dealing with large and complex software systems that require a high degree of flexibility and scalability.
-
 In Java, the Bridge pattern is implemented using a bridge interface that separates out responsibilities into different abstract classes. The bridge interface uses OOP principles to decouple the abstraction from its implementation. By doing this, the Bridge pattern allows for changes to be made to either the abstraction or the implementation without affecting the other. This makes it easier to maintain and update the software system over time.
 
 Overall, the Bridge design pattern is an essential tool for any Java programmer looking to build large and complex software systems. By decoupling the abstraction from its implementation, the Bridge pattern allows for greater flexibility and scalability, making it easier to maintain and update the software system over time. With its many benefits, it is no wonder that the Bridge pattern has become one of the most widely used design patterns in Java programming.
-
-Understanding Design Patterns
------------------------------
-
-Design patterns are a set of proven solutions to common software engineering problems. They are commonly used to improve code readability, maintainability, and scalability. Design patterns provide a common vocabulary and a shared understanding of how to solve software engineering problems.
-
-The concept of design patterns was introduced by the Gang of Four (GoF) in their book "Design Patterns: Elements of Reusable Object-Oriented Software". The book describes 23 design patterns that are classified into three categories: creational, structural, and behavioral.
-
-Design patterns are not specific to any programming language or technology. They are general solutions to common software engineering problems that can be applied to any programming language or technology.
-
-The Bridge design pattern is a structural design pattern that is used to decouple an abstraction from its implementation so that both can vary independently. The implementation of the Bridge design pattern follows the notion to prefer composition over inheritance.
-
-In software engineering, design patterns are often used to improve the quality of code, reduce the risk of introducing bugs, and make code more maintainable and scalable. Design patterns can also help developers to communicate more effectively by providing a common vocabulary and shared understanding of how to solve software engineering problems.
 
 What is Bridge Design Pattern
 -----------------------------
@@ -42,6 +24,93 @@ The Bridge design pattern is one of the Gang of Four (GoF) design patterns, whic
 The Bridge design pattern is useful when you have a complex system that needs to be broken down into smaller, more manageable parts. By using the Bridge design pattern, you can create a system that is more modular and easier to maintain.
 
 Overall, the Bridge design pattern is a powerful tool for creating flexible and scalable systems. It allows you to separate the interface from the implementation and create a system that can evolve over time without affecting the client code.
+
+Example
+--------------------------------
+Here's a simple example of the Bridge pattern in Java.
+
+Let's consider a scenario where we have different shapes (e.g., Circle, Square) and different rendering methods (e.g., Red, Green). The Bridge pattern allows us to represent these independently and provide a way to combine them:
+
+```java
+// Abstraction
+abstract class Shape {
+    protected Color color;
+
+    public Shape(Color color) {
+        this.color = color;
+    }
+
+    abstract void draw();
+}
+
+// Refined Abstraction - Circle
+class Circle extends Shape {
+    private int radius;
+
+    public Circle(Color color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
+
+    @Override
+    void draw() {
+        System.out.println("Drawing Circle with radius " + radius + " and color " + color.fill());
+    }
+}
+
+// Refined Abstraction - Square
+class Square extends Shape {
+    private int side;
+
+    public Square(Color color, int side) {
+        super(color);
+        this.side = side;
+    }
+
+    @Override
+    void draw() {
+        System.out.println("Drawing Square with side " + side + " and color " + color.fill());
+    }
+}
+
+// Implementor interface
+interface Color {
+    String fill();
+}
+
+// Concrete Implementor - Red
+class Red implements Color {
+    @Override
+    public String fill() {
+        return "Red";
+    }
+}
+
+// Concrete Implementor - Green
+class Green implements Color {
+    @Override
+    public String fill() {
+        return "Green";
+    }
+}
+
+// Client
+public class BridgePatternExample {
+    public static void main(String[] args) {
+        // Creating shapes with different colors
+        Shape redCircle = new Circle(new Red(), 5);
+        Shape greenSquare = new Square(new Green(), 8);
+
+        // Drawing shapes
+        redCircle.draw();
+        greenSquare.draw();
+    }
+}
+```
+
+In this example, we have the Shape abstraction and its refined abstractions, Circle and Square. The Color interface is the implementor interface, and Red and Green are concrete implementors. The Shape abstraction delegates the color-filling functionality to the Color interface, allowing different shapes to be combined with different colors independently.
+
+This separation allows us to add new shapes or colors without modifying the existing code, adhering to the open/closed principle and promoting code flexibility and maintainability.
 
 Key Components of Bridge Pattern
 --------------------------------
@@ -82,7 +151,7 @@ In conclusion, understanding class hierarchies is essential when working with th
 Bridge Pattern Vs Adapter Pattern
 ---------------------------------
 
-Both Bridge and Adapter patterns are used to decouple an abstraction from its implementation, but they do it in different ways.
+Both Bridge and [Adapter Pattern]({% link _posts/2023-11-26-adapter-pattern-in-java.md %}) are used to decouple an abstraction from its implementation, but they do it in different ways.
 
 The Adapter pattern is used when you have existing code that needs to be adapted to a new interface. It makes things work after they're designed. In other words, it adapts the interface of a class to be compatible with another interface. This pattern is useful when you have existing code that is out of your control or not changeable to meet the interface you need it to.
 
@@ -168,22 +237,6 @@ By using the Bridge pattern, the company can develop a remote control that can w
 
 In conclusion, the Bridge pattern is a powerful design pattern that can be used in various practical scenarios. It helps to decouple the implementation from its abstraction, which makes the system more flexible and adaptable. By using the Bridge pattern, a company can produce different types of vehicles, develop software applications for different platforms, and develop a remote control for different types of electronic devices.
 
-UML Diagram of Bridge Pattern
------------------------------
-
-The Bridge design pattern is a structural design pattern that decouples an abstraction from its implementation so that the two can vary independently. The pattern involves creating a bridge interface that uses OOP principles to separate out responsibilities into different abstract classes.
-
-A UML class diagram for the Bridge pattern typically consists of two main components: the Abstraction and the Implementor. The Abstraction is the high-level component that defines the interface for the client code to interact with. The Implementor is the low-level component that defines the interface for the concrete implementations to interact with.
-
-The following UML diagram shows the elements of the Bridge pattern:
-
-![UML Diagram of Bridge Pattern](https://www.geeksforgeeks.org/wp-content/uploads/BridgePattern.png)
-
-As shown in the diagram, the Abstraction contains a reference to the Implementor, which is used to delegate the implementation details to the concrete Implementor classes. The Refined Abstraction extends the Abstraction and takes the finer detail one level below. It hides the finer elements from the Implementers.
-
-The diagram also shows that the Implementor interface is implemented by the Concrete Implementor classes. These classes provide the actual implementation of the methods defined in the Implementor interface.
-
-In summary, the UML diagram of the Bridge pattern is a powerful tool for understanding the structure and relationships between the different components of the pattern. By using this diagram, developers can easily visualize the interactions between the Abstraction and Implementor, and the various Concrete Implementor classes that provide the actual implementation.
 
 Benefits and Drawbacks of Bridge Pattern
 ----------------------------------------
