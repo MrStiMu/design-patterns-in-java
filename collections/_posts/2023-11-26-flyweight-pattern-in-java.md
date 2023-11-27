@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Flyweight Design Pattern In Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Flyweight Design Pattern is a structural pattern that is used to reduce the memory footprint of an application. It is a design pattern that is used to create a large number of similar objects while keeping their memory consumption low. This pattern is particularly useful when object instantiation is expensive."
 thumbnail: "/assets/images/gen/blog/flyweight.png"
 image: "/assets/images/gen/blog/flyweight-2.png"
 ---
-
-Flyweight Design Pattern In Java: A Comprehensive Guide
-=======================================================
-
-The Flyweight Design Pattern is a structural pattern that is used to reduce the memory footprint of an application. It is a design pattern that is used to create a large number of similar objects while keeping their memory consumption low. This pattern is particularly useful when object instantiation is expensive.
 
 In Java, the Flyweight Design Pattern is implemented using a factory that recycles created objects by storing them after creation. The pattern is based on the concept of sharing objects to support large numbers of fine-grained objects efficiently. The flyweight acts as an independent object in each context, and the pattern achieves it by sharing parts of object state between multiple objects. In other words, the Flyweight saves RAM by caching the same data used by different objects.
 
@@ -42,6 +37,71 @@ Another popular use case for the Flyweight Pattern in Java is for creating graph
 The Flyweight Pattern is also commonly used in game development, where there may be many instances of the same object, such as a character or a weapon, that are used throughout the game. By using the Flyweight Pattern, the game can reuse existing instances of these objects instead of creating new ones, which can help to improve performance and reduce memory usage.
 
 Overall, the Flyweight Pattern is a powerful tool for optimizing the memory usage and performance of Java applications. By reusing existing objects instead of creating new ones, applications can run more efficiently and effectively.
+
+Example
+--------------------------
+
+Here's a simple example of the Flyweight pattern in Java. In this example, let's consider a scenario where we have a drawing application, and we want to represent different types of graphical objects:
+
+```java
+import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+
+// Flyweight interface
+interface Graphic {
+    void draw(int x, int y);
+}
+
+// Concrete Flyweight - Shared object
+class Circle implements Graphic {
+    private Color color;
+
+    public Circle(Color color) {
+        this.color = color;
+    }
+
+    @Override
+    public void draw(int x, int y) {
+        System.out.println("Drawing Circle at (" + x + ", " + y + ") with color " + color);
+    }
+}
+
+// Flyweight Factory
+class GraphicFactory {
+    private static Map<Color, Graphic> circleMap = new HashMap<>();
+
+    public static Graphic getCircle(Color color) {
+        Graphic circle = circleMap.get(color);
+
+        if (circle == null) {
+            circle = new Circle(color);
+            circleMap.put(color, circle);
+        }
+
+        return circle;
+    }
+}
+
+// Client
+public class FlyweightPatternExample {
+    public static void main(String[] args) {
+        // Client requests to draw circles of different colors at different positions
+        Graphic redCircle = GraphicFactory.getCircle(Color.RED);
+        Graphic blueCircle = GraphicFactory.getCircle(Color.BLUE);
+        Graphic greenCircle = GraphicFactory.getCircle(Color.GREEN);
+
+        // Drawing circles at different positions
+        redCircle.draw(100, 100);
+        blueCircle.draw(150, 150);
+        greenCircle.draw(200, 200);
+    }
+}
+```
+In this example, the Circle class represents the concrete flyweight. The GraphicFactory is responsible for managing and creating flyweight objects. The Client uses the flyweight objects to draw circles at different positions with different colors. The key idea is that if a circle with a specific color has already been created, it is reused instead of creating a new one.
+
+This pattern is particularly useful when you have a large number of similar objects that can share common state, and creating new instances for each object would be inefficient in terms of memory usage.
+
 
 Flyweight Pattern Elements
 --------------------------

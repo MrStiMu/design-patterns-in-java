@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Command Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Command Design Pattern is a behavioral design pattern that is used to manage algorithms, relationships, and responsibilities between objects. In Java, this pattern is implemented by encapsulating requests in an object, along with all the required information to perform an action of another object. The Command object knows about the receiver object and invokes a method of the receiver object to perform the requested action."
 thumbnail: "/assets/images/gen/blog/command.png"
 image: "/assets/images/gen/blog/command-2.png"
 ---
-
-Command Design Pattern in Java: A Comprehensive Guide
-=====================================================
-
-The Command Design Pattern is a behavioral design pattern that is used to manage algorithms, relationships, and responsibilities between objects. In Java, this pattern is implemented by encapsulating requests in an object, along with all the required information to perform an action of another object. The Command object knows about the receiver object and invokes a method of the receiver object to perform the requested action.
 
 The Command Design Pattern is a powerful tool for decoupling the object that invokes the operation from the one that knows how to perform it. This separation allows for greater flexibility in the design of the system, as well as easier maintenance and testing. The pattern is particularly useful in situations where commands need to be queued, logged, or undone.
 
@@ -35,6 +30,120 @@ When implementing the Command Design Pattern, it is important to use loose coupl
 The terminology used in the Command Design Pattern includes ConcreteCommand, which is a subclass of the Command interface that implements the execute method. The Command objects are instances of the ConcreteCommand class. The stack of Command objects is called the Command Queue.
 
 Overall, the Command Design Pattern is a useful pattern for separating the objects that execute a command from the objects that request the command. It allows for flexibility in the process of executing commands and can be combined with other patterns to create more complex behaviors.
+
+Example
+----------------------
+Here's a simple example of the Command pattern in Java. Let's consider a scenario of a remote control that can be used to control electronic devices like a light and a fan:
+
+```java
+// Command interface
+interface Command {
+    void execute();
+}
+
+// Concrete Command - TurnOnCommand
+class TurnOnCommand implements Command {
+    private ElectronicDevice device;
+
+    public TurnOnCommand(ElectronicDevice device) {
+        this.device = device;
+    }
+
+    @Override
+    public void execute() {
+        device.turnOn();
+    }
+}
+
+// Concrete Command - TurnOffCommand
+class TurnOffCommand implements Command {
+    private ElectronicDevice device;
+
+    public TurnOffCommand(ElectronicDevice device) {
+        this.device = device;
+    }
+
+    @Override
+    public void execute() {
+        device.turnOff();
+    }
+}
+
+// Receiver - ElectronicDevice
+interface ElectronicDevice {
+    void turnOn();
+    void turnOff();
+}
+
+// Concrete Receiver - Light
+class Light implements ElectronicDevice {
+    @Override
+    public void turnOn() {
+        System.out.println("Light is ON");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Light is OFF");
+    }
+}
+
+// Concrete Receiver - Fan
+class Fan implements ElectronicDevice {
+    @Override
+    public void turnOn() {
+        System.out.println("Fan is ON");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Fan is OFF");
+    }
+}
+
+// Invoker - RemoteControl
+class RemoteControl {
+    private Command command;
+
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    public void pressButton() {
+        command.execute();
+    }
+}
+
+// Client
+public class CommandPatternExample {
+    public static void main(String[] args) {
+        // Creating electronic devices
+        ElectronicDevice light = new Light();
+        ElectronicDevice fan = new Fan();
+
+        // Creating command objects
+        Command turnOnLight = new TurnOnCommand(light);
+        Command turnOffLight = new TurnOffCommand(light);
+        Command turnOnFan = new TurnOnCommand(fan);
+        Command turnOffFan = new TurnOffCommand(fan);
+
+        // Creating remote controls
+        RemoteControl remoteControl1 = new RemoteControl();
+        RemoteControl remoteControl2 = new RemoteControl();
+
+        // Programming remote controls with commands
+        remoteControl1.setCommand(turnOnLight);
+        remoteControl2.setCommand(turnOffFan);
+
+        // Pressing buttons on remote controls
+        remoteControl1.pressButton();  // Turns on the light
+        remoteControl2.pressButton();  // Turns off the fan
+    }
+}
+```
+In this example, we have a Command interface with TurnOnCommand and TurnOffCommand concrete command classes. The ElectronicDevice interface is a receiver interface implemented by the Light and Fan classes. The RemoteControl is the invoker, and it is programmed with commands to control electronic devices. Pressing a button on the remote control triggers the execution of the associated command.
+
+This pattern allows the client to parameterize objects with operations, delay or queue requests, and support undoable operations by storing command objects.
 
 Implementation in Java
 ----------------------

@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Mediator Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Mediator Design Pattern is one of the widely used behavioral patterns in Java. It provides a centralized communication medium between different objects in a system. The Mediator pattern encapsulates the way disparate sets of objects interact and communicate with each other, allowing loose coupling between them."
 thumbnail: "/assets/images/gen/blog/mediator.png"
 image: "/assets/images/gen/blog/mediator-2.png"
 ---
-
-Mediator Design Pattern in Java: A Comprehensive Guide
-======================================================
-
-The Mediator Design Pattern is one of the widely used behavioral patterns in Java. It provides a centralized communication medium between different objects in a system. The Mediator pattern encapsulates the way disparate sets of objects interact and communicate with each other, allowing loose coupling between them.
 
 In a typical Java application, objects interact with each other directly, which can lead to high coupling. The Mediator pattern helps to reduce this coupling by introducing a mediator object that acts as a communication hub between objects. This mediator object encapsulates the communication logic, and all objects interact with it instead of directly interacting with each other. This results in a more maintainable and scalable codebase.
 
@@ -29,6 +24,89 @@ The Mediator Design Pattern is often used in complex systems where there are man
 The UML diagram for the Mediator Design Pattern consists of four main components: Mediator, Colleague, ConcreteMediator, and ConcreteColleague. The Mediator is an abstract class that defines the interface for communicating with the Colleague objects. The Colleague is also an abstract class that defines the interface for communicating with the Mediator object. The ConcreteMediator and ConcreteColleague classes are the concrete implementations of the Mediator and Colleague classes, respectively.
 
 Overall, the Mediator Design Pattern is a useful tool for software engineers who want to design systems that are more maintainable and easier to understand. By reducing the coupling between different components of a system, the Mediator Design Pattern can help to improve the overall quality of the software.
+
+Example
+---------------------------------
+
+Here's a simple example of the Mediator pattern in Java:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+// Mediator interface
+interface Mediator {
+    void sendMessage(String message, Colleague colleague);
+}
+
+// Colleague interface
+interface Colleague {
+    void receiveMessage(String message);
+    void sendMessage(String message);
+}
+
+// Concrete Mediator
+class ConcreteMediator implements Mediator {
+    private List<Colleague> colleagues;
+
+    public ConcreteMediator() {
+        this.colleagues = new ArrayList<>();
+    }
+
+    public void addColleague(Colleague colleague) {
+        colleagues.add(colleague);
+    }
+
+    @Override
+    public void sendMessage(String message, Colleague originator) {
+        for (Colleague colleague : colleagues) {
+            // Don't send the message back to the originator
+            if (colleague != originator) {
+                colleague.receiveMessage(message);
+            }
+        }
+    }
+}
+
+// Concrete Colleague
+class ConcreteColleague implements Colleague {
+    private Mediator mediator;
+    private String name;
+
+    public ConcreteColleague(Mediator mediator, String name) {
+        this.mediator = mediator;
+        this.name = name;
+        mediator.addColleague(this);
+    }
+
+    @Override
+    public void receiveMessage(String message) {
+        System.out.println(name + " received message: " + message);
+    }
+
+    @Override
+    public void sendMessage(String message) {
+        System.out.println(name + " sending message: " + message);
+        mediator.sendMessage(message, this);
+    }
+}
+
+public class MediatorPatternExample {
+    public static void main(String[] args) {
+        ConcreteMediator mediator = new ConcreteMediator();
+
+        ConcreteColleague colleague1 = new ConcreteColleague(mediator, "Colleague 1");
+        ConcreteColleague colleague2 = new ConcreteColleague(mediator, "Colleague 2");
+        ConcreteColleague colleague3 = new ConcreteColleague(mediator, "Colleague 3");
+
+        colleague1.sendMessage("Hello, colleagues!");
+        colleague2.sendMessage("Hi there!");
+    }
+}
+```
+
+In this example, ConcreteMediator acts as the mediator, and ConcreteColleague objects communicate with each other through the mediator. The Mediator interface declares the sendMessage method, which is implemented by ConcreteMediator to handle communication between colleagues. Colleagues, in this case, are instances of the ConcreteColleague class.
+
 
 Mediator and Colleague Interfaces
 ---------------------------------
