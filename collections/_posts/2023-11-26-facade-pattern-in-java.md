@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Facade Design Pattern in Java: Simplifying Complex Code Structures"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Facade design pattern is a structural design pattern that provides a simplified interface to a complex system of classes, interfaces, and objects. It is a widely used design pattern in Java that encapsulates a set of interfaces in a subsystem and provides a unified interface to the client. The Facade design pattern is a way to decouple the client from the subsystem, making it easier to use and maintain."
 thumbnail: "/assets/images/gen/blog/facade.png"
 image: "/assets/images/gen/blog/facade-2.png"
 ---
-
-Facade Design Pattern in Java: Simplifying Complex Code Structures
-==================================================================
-
-The Facade design pattern is a structural design pattern that provides a simplified interface to a complex system of classes, interfaces, and objects. It is a widely used design pattern in Java that encapsulates a set of interfaces in a subsystem and provides a unified interface to the client. The Facade design pattern is a way to decouple the client from the subsystem, making it easier to use and maintain.
 
 In Java, the Facade design pattern is used to provide a simple interface to a complex system of classes. It is a way to hide the complexity of the system from the client, making it easier to use and understand. The Facade design pattern is often used in large-scale applications where there are many subsystems that need to be accessed by the client. By using the Facade pattern, the client can access the subsystems through a single interface, making it easier to manage and maintain the application.
 
@@ -29,6 +24,86 @@ The main idea behind the Facade pattern is to provide a single point of entry to
 The Facade pattern is often used in conjunction with other design patterns such as the Adapter pattern and the Decorator pattern. The Facade pattern can be used to simplify the interaction between subsystems, while the Adapter pattern can be used to adapt an existing interface to meet the requirements of a new system. The Decorator pattern can be used to add new functionality to an existing system without changing the existing code.
 
 In summary, the Facade Design Pattern is a structural design pattern used to provide a simplified interface to a complex system. It helps to hide the complexity of the subsystem by providing a unified interface to a set of interfaces in a subsystem. The Facade pattern is often used in conjunction with other design patterns such as the Adapter pattern and the Decorator pattern.
+
+Example
+---------------------------------------
+Here's a simple example of the Facade pattern in Java. Let's consider a multimedia system with various components like the AudioPlayer, VideoPlayer, and Display. The Facade pattern provides a simplified interface to start and stop the multimedia system:
+
+```java
+// Subsystem - AudioPlayer
+class AudioPlayer {
+    public void play() {
+        System.out.println("AudioPlayer: Playing audio");
+    }
+
+    public void stop() {
+        System.out.println("AudioPlayer: Stopping audio");
+    }
+}
+
+// Subsystem - VideoPlayer
+class VideoPlayer {
+    public void play() {
+        System.out.println("VideoPlayer: Playing video");
+    }
+
+    public void stop() {
+        System.out.println("VideoPlayer: Stopping video");
+    }
+}
+
+// Subsystem - Display
+class Display {
+    public void show() {
+        System.out.println("Display: Showing content");
+    }
+
+    public void hide() {
+        System.out.println("Display: Hiding content");
+    }
+}
+
+// Facade
+class MultimediaFacade {
+    private AudioPlayer audioPlayer;
+    private VideoPlayer videoPlayer;
+    private Display display;
+
+    public MultimediaFacade() {
+        this.audioPlayer = new AudioPlayer();
+        this.videoPlayer = new VideoPlayer();
+        this.display = new Display();
+    }
+
+    // Facade methods to start and stop the multimedia system
+    public void startMultimedia() {
+        audioPlayer.play();
+        videoPlayer.play();
+        display.show();
+    }
+
+    public void stopMultimedia() {
+        audioPlayer.stop();
+        videoPlayer.stop();
+        display.hide();
+    }
+}
+
+// Client
+public class FacadePatternExample {
+    public static void main(String[] args) {
+        // Using the Facade to start and stop the multimedia system
+        MultimediaFacade multimediaFacade = new MultimediaFacade();
+        multimediaFacade.startMultimedia();
+
+        // Perform other operations...
+
+        multimediaFacade.stopMultimedia();
+    }
+}
+```
+
+In this example, the MultimediaFacade class acts as a facade, providing a simplified interface to start and stop the multimedia system. It hides the complexity of the subsystem, which includes the AudioPlayer, VideoPlayer, and Display. The client interacts with the system through the facade without needing to know the details of how each subsystem component works.
 
 Key Components of Facade Design Pattern
 ---------------------------------------
