@@ -274,7 +274,7 @@ The Facade Pattern is a structural pattern that provides a simplified interface 
 
 ### Other Design Patterns
 
-There are many other design patterns that can be used in conjunction with the Adapter Pattern to solve specific problems. For example, the Bridge Pattern is a structural pattern that separates an abstraction from its implementation, allowing them to vary independently. The [Proxy Pattern]({% link _posts/2023-11-11-proxy-pattern-in-java.md %}) is a structural pattern that provides a surrogate or placeholder for another object to control access to it. Finally, the [Composite Pattern]({% link _posts/2023-11-26-composite-pattern-in-java.md %}) is a structural pattern that allows you to treat a group of objects as a single object.
+There are many other design patterns that can be used in conjunction with the Adapter Pattern to solve specific problems. For example, the Bridge Pattern is a structural pattern that separates an abstraction from its implementation, allowing them to vary independently. The Proxy Pattern is a structural pattern that provides a surrogate or placeholder for another object to control access to it. Finally, the [Composite Pattern]({% link _posts/2023-11-26-composite-pattern-in-java.md %}) is a structural pattern that allows you to treat a group of objects as a single object.
 
 Overall, understanding the different design patterns and how they relate to each other can help you choose the right pattern for your specific use case. By using the right pattern, you can write more maintainable and scalable code that is easier to understand and modify.
 
