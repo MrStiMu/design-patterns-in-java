@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Decorator Design Pattern in Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "The Decorator Design Pattern is a structural design pattern in Java that allows developers to add additional features or behaviors to an object dynamically. It is a useful pattern for situations where subclassing is not a viable option, or when there are too many subclasses to manage. The Decorator Design Pattern involves creating a decorator class that wraps around the original class and provides additional functionality without altering the original class's structure."
 thumbnail: "/assets/images/gen/blog/decorator.png"
 image: "/assets/images/gen/blog/decorator-2.png"
 ---
-
-Decorator Design Pattern in Java: A Comprehensive Guide
-=======================================================
-
-The Decorator Design Pattern is a structural design pattern in Java that allows developers to add additional features or behaviors to an object dynamically. It is a useful pattern for situations where subclassing is not a viable option, or when there are too many subclasses to manage. The Decorator Design Pattern involves creating a decorator class that wraps around the original class and provides additional functionality without altering the original class's structure.
 
 The Decorator Design Pattern is one of the most widely used design patterns in Java. It is used to extend the functionality of an object dynamically, without affecting the behavior of other objects of the same class. The Decorator Design Pattern is a flexible alternative to subclassing, as it allows developers to add new functionality to an object at runtime. This pattern is particularly useful in situations where the base class is complex or has many subclasses, making it difficult to manage.
 
@@ -29,6 +24,109 @@ The Decorator Design Pattern is useful when you need to add new features or beha
 In the Decorator Design Pattern, the decorator class wraps the original class and provides additional functionality. The decorator class has the same interface as the original class, so the client can use the decorator class in the same way as the original class. The decorator class can also contain a reference to the original class, which it uses to call the original class's methods.
 
 Overall, the Decorator Design Pattern is a useful design pattern for adding new functionality to an existing class without altering its structure. It is part of the Gang of Four design patterns and is one of the Structural Patterns. The decorator class wraps the original class and provides additional functionality, while still maintaining the same interface as the original class.
+
+Example
+-----------------------------------------
+
+Here's a simple example of the Decorator pattern in Java. Let's consider a basic coffee shop scenario with a Coffee interface and concrete implementations. We'll use decorators to add different types of condiments to the coffee:
+
+```java
+// Component interface
+interface Coffee {
+    double cost();
+    String description();
+}
+
+// Concrete component
+class SimpleCoffee implements Coffee {
+    @Override
+    public double cost() {
+        return 2.0; // Base cost of simple coffee
+    }
+
+    @Override
+    public String description() {
+        return "Simple Coffee";
+    }
+}
+
+// Decorator abstract class
+abstract class CoffeeDecorator implements Coffee {
+    protected Coffee decoratedCoffee;
+
+    public CoffeeDecorator(Coffee decoratedCoffee) {
+        this.decoratedCoffee = decoratedCoffee;
+    }
+
+    @Override
+    public double cost() {
+        return decoratedCoffee.cost();
+    }
+
+    @Override
+    public String description() {
+        return decoratedCoffee.description();
+    }
+}
+
+// Concrete decorator - Milk
+class MilkDecorator extends CoffeeDecorator {
+    public MilkDecorator(Coffee decoratedCoffee) {
+        super(decoratedCoffee);
+    }
+
+    @Override
+    public double cost() {
+        return super.cost() + 0.5; // Additional cost for milk
+    }
+
+    @Override
+    public String description() {
+        return super.description() + " with Milk";
+    }
+}
+
+// Concrete decorator - Sugar
+class SugarDecorator extends CoffeeDecorator {
+    public SugarDecorator(Coffee decoratedCoffee) {
+        super(decoratedCoffee);
+    }
+
+    @Override
+    public double cost() {
+        return super.cost() + 0.2; // Additional cost for sugar
+    }
+
+    @Override
+    public String description() {
+        return super.description() + " with Sugar";
+    }
+}
+
+// Client
+public class DecoratorPatternExample {
+    public static void main(String[] args) {
+        // Creating a simple coffee
+        Coffee simpleCoffee = new SimpleCoffee();
+        System.out.println("Cost: $" + simpleCoffee.cost() + ", Description: " + simpleCoffee.description());
+
+        // Adding milk to the coffee
+        Coffee milkCoffee = new MilkDecorator(simpleCoffee);
+        System.out.println("Cost: $" + milkCoffee.cost() + ", Description: " + milkCoffee.description());
+
+        // Adding sugar to the coffee
+        Coffee sugarCoffee = new SugarDecorator(simpleCoffee);
+        System.out.println("Cost: $" + sugarCoffee.cost() + ", Description: " + sugarCoffee.description());
+
+        // Adding both milk and sugar to the coffee
+        Coffee milkAndSugarCoffee = new MilkDecorator(new SugarDecorator(simpleCoffee));
+        System.out.println("Cost: $" + milkAndSugarCoffee.cost() + ", Description: " + milkAndSugarCoffee.description());
+    }
+}
+```
+In this example, Coffee is the component interface, SimpleCoffee is the concrete component, and CoffeeDecorator is the abstract decorator. Concrete decorators (MilkDecorator and SugarDecorator) extend CoffeeDecorator to add specific behavior (cost and description) to the coffee.
+
+The client can create different combinations of decorated coffees by stacking decorators, and each decorator adds its specific behavior to the coffee without affecting the others.
 
 Core Concepts in Decorator Design Pattern
 -----------------------------------------

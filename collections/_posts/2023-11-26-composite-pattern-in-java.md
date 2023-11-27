@@ -1,17 +1,12 @@
 ---
 layout: post
-title: "Singleton Pattern in Java: A Comprehensive Guide"
-date: 2023-11-05T10:20:00Z
+title: "Composite Design Pattern In Java: A Comprehensive Guide"
+date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Singleton pattern is a popular design pattern in Java that ensures a class has only one instance and provides a global point of access to that instance. This pattern is widely used in situations where there is a need for a single object to coordinate actions across the system. In Java, the Singleton pattern is implemented by defining a class with a private constructor and a static method that returns the instance of the class."
+description: "Composite design pattern is a widely used software engineering concept that helps in creating a structure in a way that objects in the structure can be treated the same way. The pattern represents a tree-like structure made up of types that inherit a base type, and it can represent a single part or a whole hierarchy of objects. The pattern is known for its ability to allow treating individual objects and compositions of objects in the same way."
 thumbnail: "/assets/images/gen/blog/composite.png"
 image: "/assets/images/gen/blog/composite-2.png"
 ---
-
-Composite Design Pattern In Java: A Comprehensive Guide
-=======================================================
-
-Composite design pattern is a widely used software engineering concept that helps in creating a structure in a way that objects in the structure can be treated the same way. The pattern represents a tree-like structure made up of types that inherit a base type, and it can represent a single part or a whole hierarchy of objects. The pattern is known for its ability to allow treating individual objects and compositions of objects in the same way.
 
 In Java, Composite Design Pattern is a popular approach to creating complex structures. It allows developers to define class hierarchies that contain primitive and complex objects, making it easier to add new kinds of components. The pattern is used when there is a need to create a structure in a way that the objects in the structure have to be treated the same way. It is a partitioning design pattern that describes a group of objects that is treated the same way as a single instance of the same type of object.
 
@@ -31,6 +26,91 @@ The Composite Design Pattern consists of two main entities: the Component interf
 The Composite class has a collection of child objects, and it implements the Component interface. This allows the Composite class to be treated as a Component object. The Composite class can also have methods to add and remove child objects.
 
 In summary, the Composite Design Pattern is a useful pattern for representing hierarchical structures or compositions. It allows treating individual objects and compositions of objects in the same way and creates a tree structure that represents the hierarchical structure of the objects. The pattern consists of the Component interface and the Composite class, which work together to create the hierarchical structure.
+
+Example
+-------------------------------------------
+Here's a simple example of the Composite pattern in Java. Let's consider a scenario where we want to model a file system with directories and files:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+// Component interface
+interface FileSystemComponent {
+    void showDetails();
+}
+
+// Leaf - File
+class File implements FileSystemComponent {
+    private String name;
+
+    public File(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void showDetails() {
+        System.out.println("File: " + name);
+    }
+}
+
+// Composite - Directory
+class Directory implements FileSystemComponent {
+    private String name;
+    private List<FileSystemComponent> components;
+
+    public Directory(String name) {
+        this.name = name;
+        this.components = new ArrayList<>();
+    }
+
+    public void addComponent(FileSystemComponent component) {
+        components.add(component);
+    }
+
+    @Override
+    public void showDetails() {
+        System.out.println("Directory: " + name);
+        System.out.println("Contents:");
+
+        for (FileSystemComponent component : components) {
+            component.showDetails();
+        }
+    }
+}
+
+// Client
+public class CompositePatternExample {
+    public static void main(String[] args) {
+        // Creating files
+        FileSystemComponent file1 = new File("Document1.txt");
+        FileSystemComponent file2 = new File("Image1.jpg");
+        FileSystemComponent file3 = new File("Document2.txt");
+
+        // Creating directories
+        FileSystemComponent directory1 = new Directory("Folder1");
+        FileSystemComponent directory2 = new Directory("Folder2");
+
+        // Adding files to directories
+        ((Directory) directory1).addComponent(file1);
+        ((Directory) directory1).addComponent(file2);
+        ((Directory) directory2).addComponent(file3);
+
+        // Adding directories to another directory
+        FileSystemComponent rootDirectory = new Directory("Root");
+        ((Directory) rootDirectory).addComponent(directory1);
+        ((Directory) rootDirectory).addComponent(directory2);
+
+        // Showing details of the entire file system
+        rootDirectory.showDetails();
+    }
+}
+```
+
+In this example, FileSystemComponent is the component interface, File is a leaf node representing a file, and Directory is a composite node representing a directory that can contain files or other directories.
+
+The client can create a complex structure by combining files and directories, and it can treat both individual files and entire directory structures uniformly through the common FileSystemComponent interface. The showDetails method is recursively called on components, allowing the client to traverse the entire structure.
+
 
 Core Components of Composite Design Pattern
 -------------------------------------------
