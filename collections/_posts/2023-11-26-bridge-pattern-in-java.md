@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bridge Design Pattern in Java: A Comprehensive Guide"
+title: "Bridge Design Pattern in Java"
 date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "The Bridge design pattern is one of the most commonly used design patterns in Java programming. It is a structural design pattern that decouples an abstraction from its implementation so that both can vary independently. The Bridge pattern is used when there is a need to separate an abstraction from its implementation, allowing them to evolve independently. This pattern is particularly useful when dealing with large and complex software systems that require a high degree of flexibility and scalability."
