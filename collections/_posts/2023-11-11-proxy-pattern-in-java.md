@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Proxy Pattern in Java: A Comprehensive Guide"
+title: "Proxy Pattern in Java"
 date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
-description: "The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to create a wrapper around the main object's complexity from the client. The proxy pattern is used when we need to represent an object located remotely. Talking to the real object might involve marshalling and unmarshalling of data and talking to the remote object."
+description: "Enhance Java code security and control with the Proxy pattern: efficiently manage access to objects for optimized performance."
 thumbnail: "/assets/images/gen/blog/proxy.png"
 image: "/assets/images/gen/blog/proxy.png"
 ---
+
+The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to create a wrapper around the main object's complexity from the client. The proxy pattern is used when we need to represent an object located remotely. Talking to the real object might involve marshalling and unmarshalling of data and talking to the remote object.
 
 In Java, the Proxy Design Pattern is used extensively in various frameworks and libraries to provide a layer of abstraction between the client and the actual implementation. It is used to implement various features such as security, caching, and lazy loading. The proxy pattern is also used to reduce the cost associated with creating fully initialized original objects.
 

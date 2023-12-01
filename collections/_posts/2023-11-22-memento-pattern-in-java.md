@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Memento Design Pattern in Java: A Comprehensive Guide"
+title: "Memento Design Pattern in Java"
 date: 2023-11-22T10:20:00Z
 categories: ["Creational"]
-description: "The Memento Design Pattern is a behavioral design pattern that is commonly used in Java programming. It allows developers to save and restore the state of an object without affecting its internal structure or data. This pattern is particularly useful when an application requires the ability to undo or redo actions or when it needs to save a snapshot of an object's state for later use."
+description: "Secure Java state management with the Memento pattern: capture and restore object states for reliable and flexible application design."
 thumbnail: "/assets/images/gen/blog/memento.png"
 image: "/assets/images/gen/blog/memento-2.png"
 ---
+The Memento Design Pattern is a behavioral design pattern that is commonly used in Java programming. It allows developers to save and restore the state of an object without affecting its internal structure or data. This pattern is particularly useful when an application requires the ability to undo or redo actions or when it needs to save a snapshot of an object's state for later use.
 
 The Memento Design Pattern is based on three key components: the Originator, the Memento, and the Caretaker. The Originator is the object that has a state that needs to be saved or restored. The Memento is an immutable object that stores the state of the Originator. The Caretaker is responsible for managing the Mementos and restoring the state of the Originator when necessary.
 

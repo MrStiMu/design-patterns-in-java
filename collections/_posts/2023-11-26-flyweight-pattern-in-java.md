@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Flyweight Design Pattern In Java: A Comprehensive Guide"
+title: "Flyweight Design Pattern In Java"
 date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Flyweight Design Pattern is a structural pattern that is used to reduce the memory footprint of an application. It is a design pattern that is used to create a large number of similar objects while keeping their memory consumption low. This pattern is particularly useful when object instantiation is expensive."
+description: "Optimize Java memory usage with the Flyweight pattern: efficiently share and reuse objects for lightweight and resource-efficient designs."
 thumbnail: "/assets/images/gen/blog/flyweight.png"
 image: "/assets/images/gen/blog/flyweight-2.png"
 ---
+The Flyweight Design Pattern is a structural pattern that is used to reduce the memory footprint of an application. It is a design pattern that is used to create a large number of similar objects while keeping their memory consumption low. This pattern is particularly useful when object instantiation is expensive.
 
 In Java, the Flyweight Design Pattern is implemented using a factory that recycles created objects by storing them after creation. The pattern is based on the concept of sharing objects to support large numbers of fine-grained objects efficiently. The flyweight acts as an independent object in each context, and the pattern achieves it by sharing parts of object state between multiple objects. In other words, the Flyweight saves RAM by caching the same data used by different objects.
 

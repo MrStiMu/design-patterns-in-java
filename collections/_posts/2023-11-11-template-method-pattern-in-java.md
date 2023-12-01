@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Template Method Design Pattern in Java: A Comprehensive Guide"
+title: "Template Method Design Pattern in Java"
 date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
-description: "The Template Method Design Pattern is a popular behavioral design pattern in Java that defines the program skeleton of an algorithm in a method, but allows subclasses to modify certain steps without changing the structure of the algorithm. The overall sequence and structure of the algorithm are maintained by the parent class, while the details are left to be implemented by the child classes."
+description: "Refine Java code structure with the Template Method pattern: define skeletal algorithms, allowing flexibility in individual steps."
 thumbnail: "/assets/images/gen/blog/template-method.png"
 image: "/assets/images/gen/blog/template-method.png"
 ---
+The Template Method Design Pattern is a popular behavioral design pattern in Java that defines the program skeleton of an algorithm in a method, but allows subclasses to modify certain steps without changing the structure of the algorithm. The overall sequence and structure of the algorithm are maintained by the parent class, while the details are left to be implemented by the child classes.
 
 This pattern is widely used in the Java core libraries, including java.util.AbstractList, java.util.AbstractSet, and java.util.AbstractMap. For example, AbstractList provides a skeletal implementation of the List interface, while the addAll() method can be considered a template method. Developers can also use this pattern to create more maintainable, flexible, and understandable code.
 
