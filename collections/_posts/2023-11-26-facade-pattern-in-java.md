@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Facade Design Pattern in Java: Simplifying Complex Code Structures"
+title: "Facade Design Pattern in Java"
 date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Simplify Java system complexities with the Facade pattern: provide a unified interface for a set of interfaces, making interactions more straightforward."
