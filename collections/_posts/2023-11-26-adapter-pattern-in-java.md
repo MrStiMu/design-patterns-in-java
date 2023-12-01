@@ -3,7 +3,7 @@ layout: post
 title: "Adapter Design Pattern in Java"
 date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
-description: "The Adapter Design Pattern is a structural pattern that enables incompatible interfaces to work together. It is a popular design pattern used in Java programming. The Adapter Design Pattern in Java acts as a bridge between two unrelated interfaces, allowing them to work together seamlessly."
+description: "Explore Java's Adapter pattern: seamlessly integrate incompatible interfaces for efficient and flexible code."
 thumbnail: "/assets/images/gen/blog/adapter.png"
 image: "/assets/images/gen/blog/adapter-2.png"
 ---
