@@ -4,8 +4,8 @@ title: "Private Class Data Pattern In Java"
 date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Enhance Java data encapsulation with the Private Class Data pattern: secure data integrity by restricting direct access and manipulation."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/private.png"
+image: "/assets/images/gen/blog/private1.png"
 ---
 The Private Class Data pattern is a design pattern used in computer programming to encapsulate class attributes and their manipulation. The pattern is also known as the PIMPL (Private Implementation) or Opaque Pointer. The Private Class Data pattern is designed to protect an object's data, even from its own methods.
 

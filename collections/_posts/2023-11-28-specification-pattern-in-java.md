@@ -4,8 +4,8 @@ title: "Specification Pattern In Java"
 date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
 description: "Refine Java code flexibility with the Specification pattern: express complex business rules as composable objects for precise and modular design."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/specification.png"
+image: "/assets/images/gen/blog/specification1.png"
 ---
 The Specification Pattern is a popular design pattern in Java used to encapsulate business rules that define a particular criteria. It was first introduced by Eric Evans and Martin Fowler in their Specifications Paper. The pattern separates the statement of how to match a candidate from the candidate object that it is matched against.
 
