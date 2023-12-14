@@ -4,8 +4,8 @@ title: "Mixin Pattern in Java"
 date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Enhance Java code reusability with the Mixin pattern: dynamically combine behaviors for flexible and modular object composition."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/mixin.png"
+image: "/assets/images/gen/blog/mixin1.png"
 ---
 The Mixin Pattern is a popular design pattern in object-oriented programming that allows developers to add new functionality to an existing class without having to modify its source code. This pattern is particularly useful when dealing with complex class hierarchies, as it enables developers to create reusable modules of code that can be combined in different ways to achieve the desired functionality.
 

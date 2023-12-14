@@ -4,8 +4,8 @@ title: "Module Pattern in Java: An Overview"
 date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Organize and encapsulate functionality in Java with the Module pattern: promote clean code structure and maintainability through encapsulation and abstraction."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/modulep.png"
+image: "/assets/images/gen/blog/modulep1.png"
 ---
 The Module Pattern is a popular design pattern used in Java programming language. It is a creational and structural pattern that manages the creation and organization of other elements, grouping them as the structural pattern does. The pattern allows developers to build modular and reusable applications by encapsulating code into modules, improving code organization and reducing code duplication.
 

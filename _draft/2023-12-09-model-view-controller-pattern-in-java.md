@@ -4,8 +4,8 @@ title: "Model View Controller (MVC) Design Pattern in Java"
 date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Model View Controller (MVC) is a popular design pattern used in software engineering to develop scalable and maintainable applications. It is a software architectural pattern that separates an application into three interconnected components: Model, View, and Controller. The Model represents the data and business logic of the application, the View represents the user interface, and the Controller acts as an intermediary between the Model and View."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/mvc1.png"
+image: "/assets/images/gen/blog/mvc.png"
 ---
 
 In Java, the MVC pattern is widely used to develop web applications, desktop applications, and mobile applications. The Model component in Java MVC is implemented using JavaBeans or POJOs (Plain Old Java Objects), which encapsulate the data and business logic of the application. The View component is implemented using JSP (Java Server Pages), which is a technology used to create dynamic web pages. The Controller component is implemented using Servlets, which handle the user requests and process the data from the Model to the View.

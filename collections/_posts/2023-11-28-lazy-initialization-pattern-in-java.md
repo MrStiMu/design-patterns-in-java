@@ -4,8 +4,8 @@ title: "Lazy Initialization Pattern In Java: Explained"
 date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Optimize resource usage in Java with the Lazy Initialization pattern: delay object creation until the first access, enhancing efficiency and performance."
-thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+thumbnail: "/assets/images/gen/blog/lazyinit.png"
+image: "/assets/images/gen/blog/lazyinit1.png"
 ---
 The lazy initialization design pattern is a technique that postpones the creation of an object until it is actually needed. In Java, this pattern is used to optimize the performance of an application by reducing the amount of memory consumed during its execution. The concept of lazy initialization is to delay the creation of an object until it is actually required by the program. This technique is used to improve the efficiency of an application by reducing the amount of memory consumed during its execution.
 
