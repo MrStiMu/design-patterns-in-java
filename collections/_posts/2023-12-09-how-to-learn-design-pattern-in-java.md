@@ -15,6 +15,7 @@ One way to learn design patterns in Java is by studying online tutorials and res
 Understanding Design Patterns
 -----------------------------
 
+
 ### History and Evolution
 
 Design patterns are a set of well-defined solutions to common problems that developers face during software development. The concept of design patterns was first introduced by Christopher Alexander in the field of architecture. Later, in 1994, four developers - Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides - published a book named "Design Patterns: Elements of Reusable Object-Oriented Software," which is commonly known as the Gang of Four (GoF) book.
