@@ -52,6 +52,21 @@
 {% include framework/global/analytics/google-analytics.html %}
 {% include framework/global/analytics/plausible-analytics.html %}
 {% include framework/global/analytics/umami-analytics.html %}
-
+<script>
+  !function (t, e, c, n) {
+    var s = e.createElement(c);
+    s.async = 1, s.src = 'https://scripts.claspo.io/scripts/' + n + '.js';
+    var r = e.scripts[0];
+    r.parentNode.insertBefore(s, r);
+    var f = function () {
+      f.c(arguments);
+    };
+    f.q = [];
+    f.c = function () {
+      f.q.push(arguments);
+    };
+    t['claspo'] = t['claspo'] || f;
+  }(window, document, 'script', '3755EC50D28747A08442DBA123485455');
+</script><script>claspo('init');</script>
 </body>
 </html>
