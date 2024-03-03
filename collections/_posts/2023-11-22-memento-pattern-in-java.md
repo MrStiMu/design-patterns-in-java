@@ -124,14 +124,6 @@ The Memento is an object that stores the snapshot of the Originator's state. It 
 
 ### Caretaker
 
-The Caretaker is responsible for managing the Memento objects. It is the object that keeps track of the history of the Originator's state changes. The Caretaker has two main methods: `save()` and `restore()`. The `save()` method adds the current state of the Originator to a list or stack of Memento objects, while the `restore()` method retrieves the most recent Memento object and restores the Originator's state.
-
-The following class diagram illustrates the relationships between the components of the Memento Design Pattern:
-
-![Memento Design Pattern Class Diagram](https://www.baeldung.com/wp-content/uploads/2018/07/Memento-Pattern-Class-Diagram.png)
-
-In summary, the Memento Design Pattern provides a mechanism to store an object's state and restore it later. The Originator creates and maintains the object's internal state, the Memento stores the snapshot of the object's state, and the Caretaker manages the Memento objects. The Caretaker keeps a history of the object's state changes, allowing for undo/redo functionality. The history can be implemented using a list, an ArrayList, or a stack.
-
 Working of Memento Design Pattern
 ---------------------------------
 

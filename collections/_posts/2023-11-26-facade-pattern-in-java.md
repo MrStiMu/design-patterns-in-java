@@ -177,11 +177,6 @@ The Facade pattern can be implemented using a Manager class that acts as a Facad
 
 The Manager class can use the Mediator pattern to integrate the implementation classes. The Mediator pattern provides a way to reduce the coupling between the implementation classes.
 
-### Reference Implementation
-
-A reference implementation of the Facade pattern for the mobile shop example can be found on [GitHub](https://github.com/facadepatternclient/FacadePattern). The reference implementation provides a demo class that shows how to use the Facade pattern to generate the report.
-
-The Facade pattern can be used to simplify the coding and make it easier to maintain. It provides a way to hide the internal complexity of the system and provide a simplified interface to the client.
 
 Advantages of Using Facade Design Pattern
 -----------------------------------------

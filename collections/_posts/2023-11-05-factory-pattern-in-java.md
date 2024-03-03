@@ -287,28 +287,10 @@ To visualize the Factory pattern, a UML class diagram can be used. The diagram c
 *   **ConcreteCreator**: This is the concrete class that implements the Creator interface and overrides the factory method to return an instance of a ConcreteProduct.
 
 
-The UML class diagram for the Factory pattern looks like this:
-
-![UML Class Diagram for Factory Pattern](https://www.baeldung.com/wp-content/uploads/2017/09/factory-method-uml.png)
-
-In the diagram, the Creator declares the factory method, which returns a Product. The ConcreteCreator overrides the factory method to return an instance of a ConcreteProduct. The ConcreteProduct implements the Product interface, which defines the common interface for all concrete products.
-
-The Factory pattern is useful when you have a superclass with multiple sub-classes and based on input, you need to return one of the sub-class. For example, consider a CarFactory that creates different types of cars based on the input. The CarFactory can be implemented using the Factory pattern, where the Creator is the CarFactory and the ConcreteCreators are the different types of cars.
-
-The Factory pattern also supports the Open/Closed Principle, which states that software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means that new types of products can be added to the system without changing the existing code.
-
-The Factory pattern also supports polymorphic behavior, which means that the behavior of an object can be changed at runtime depending on the type of object. This is because the Factory pattern creates objects using a virtual constructor, which allows objects to be created without specifying the exact class of object that will be created.
-
-Overall, the Factory pattern is a powerful design pattern that provides a flexible and extensible way to create objects in a superclass. It is widely used in Java and can be found in many popular libraries and frameworks, such as Spring and Struts. The code for the Factory pattern can be found on Github and is easy to understand and implement.
-
 Further Examples and Implementations
 ------------------------------------
 
 The Factory pattern is a widely used design pattern in Java, and there are many examples and implementations available on various platforms. Here are some of the most popular ones:
-
-### GitHub Implementations
-
-GitHub is a great resource for finding examples of the Factory pattern in Java. There are many open-source projects that use this pattern, and they can be a great source of inspiration for developers who are new to the pattern. For example, the [generatebill class](https://github.com/ashishjainnitb/generatebill-class) on GitHub is a simple implementation of the Factory pattern that shows how to use concrete classes to instantiate objects.
 
 ### Concrete Classes
 

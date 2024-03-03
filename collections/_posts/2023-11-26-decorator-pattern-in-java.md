@@ -241,7 +241,6 @@ The DataSourceDecorator class is an abstract class that extends the DataSource c
 
 The Demo class is a client that uses the DataSource class and its decorators to read and write data from and to a file.
 
-The source code for this example is available on [GitHub](https://github.com/example/decorator-pattern-java).
 
 Extending Functionality with Decorator Pattern
 ----------------------------------------------
