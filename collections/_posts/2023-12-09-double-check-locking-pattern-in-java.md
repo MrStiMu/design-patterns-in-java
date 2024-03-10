@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "The Double-Checked Locking Pattern is a popular design pattern in Java that is used to reduce the overhead of acquiring a lock by testing the locking criterion before acquiring the lock. This pattern is particularly useful in scenarios where there is concurrent access in object creation, such as in the case of a singleton where you want to create a single instance of the same class. The pattern involves checking if an instance of the class has already been created, and if not, acquiring a lock to create the instance."
 thumbnail: "/assets/images/gen/blog/locking.png"
-image: "/assets/images/gen/blog/locking1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 The Double-Checked Locking Pattern is known for its ability to improve performance by avoiding the overhead of acquiring a lock unnecessarily. However, it is important to implement the pattern correctly to avoid subtle bugs that can arise due to the nature of multi-threaded programming. The pattern must be implemented in a thread-safe manner to ensure that only one instance of the class is created, and that no two threads create an instance of the class simultaneously.

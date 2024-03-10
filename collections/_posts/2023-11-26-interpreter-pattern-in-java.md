@@ -5,7 +5,7 @@ date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Empower Java language processing with the Interpreter pattern: define grammatical rules for efficient and extensible interpretation of expressions."
 thumbnail: "/assets/images/gen/blog/interpreter.png"
-image: "/assets/images/gen/blog/interpreter-2.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 The Interpreter Design Pattern is a popular software design pattern used in Java that defines a grammatical representation for a language and provides an interpreter to deal with this grammar. This pattern is used in SQL parsing, symbol processing engines and other language processing systems. The basic idea behind the Interpreter Design Pattern is to have a class for each symbol (terminal or nonterminal) in a specialized computer language.
 

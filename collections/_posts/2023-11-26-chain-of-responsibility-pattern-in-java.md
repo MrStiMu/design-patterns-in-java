@@ -5,7 +5,7 @@ date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Empower Java code with the Chain of Responsibility pattern: create a seamless flow of handlers for efficient and flexible request processing."
 thumbnail: "/assets/images/gen/blog/chain.png"
-image: "/assets/images/gen/blog/chain.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 The Chain of Responsibility Design Pattern is a behavioral design pattern that is used to achieve loose coupling in software design. It is a source of command objects and a series of processing objects where each processing object in the chain is responsible for a certain type of command. Once the processing is done, it forwards the command to the next processor in the chain. The chain can be composed dynamically at runtime with any handler that follows a standard handler interface.
 

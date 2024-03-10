@@ -5,7 +5,7 @@ date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Strengthen Java structures with the Composite pattern: compose objects into tree structures for unified and hierarchical component management."
 thumbnail: "/assets/images/gen/blog/composite.png"
-image: "/assets/images/gen/blog/composite-2.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 Composite design pattern is a widely used software engineering concept that helps in creating a structure in a way that objects in the structure can be treated the same way. The pattern represents a tree-like structure made up of types that inherit a base type, and it can represent a single part or a whole hierarchy of objects. The pattern is known for its ability to allow treating individual objects and compositions of objects in the same way.
 

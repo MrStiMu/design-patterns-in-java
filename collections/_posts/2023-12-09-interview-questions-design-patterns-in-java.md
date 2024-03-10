@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Java design patterns are an essential aspect of software development, as they provide reusable solutions to commonly occurring problems in software design. By mastering Java design patterns, developers can create more efficient, flexible, and maintainable code, which is a valuable skill in today's job market. Consequently, interviewers often ask about design patterns in interviews to test a candidate's understanding of these concepts and their ability to apply them in real-world scenarios."
 thumbnail: "/assets/images/gen/blog/interview.png"
-image: "/assets/images/gen/blog/interview.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 There are various types of design patterns, such as creational, structural, and behavioral patterns, each tackling different problem areas in software development. It is crucial for candidates to familiarize themselves with these patterns' fundamentals to perform well in interviews. In addition to the basic understanding, candidates should also be prepared to answer questions covering the practical implementation and use cases of these patterns, as it can demonstrate their hands-on experience and expertise in using these concepts effectively.

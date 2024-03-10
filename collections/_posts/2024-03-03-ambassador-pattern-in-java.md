@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "The Ambassador Design Pattern is a structural pattern used in software development to act as an intermediary or a helper service, facilitating the communication between a client application and a remote resource or service. It is primarily implemented in scenarios where a network of services must interact smoothly and is especially useful when dealing with remote network access, where it can hide the complexities of interacting with remote resources. The ambassador pattern serves as an out-of-process proxy that provides additional features such as monitoring, logging, circuit breaking, and security."
 thumbnail: "/assets/images/gen/blog/amb.webp"
-image: "/assets/images/gen/blog/amb1.webp"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 In Java, the Ambassador Design Pattern can be effectively utilized to create robust and maintainable applications. Using the ambassador pattern allows developers to isolate the functionality of interfacing with remote services by delegating these tasks to a dedicated ambassador object. This ensures that the application's core logic remains uncluttered with the intricacies of network communications and can focus on its primary responsibilities. The pattern also simplifies the handling of retry policies, network errors, and response parsing, which are common challenges when dealing with applications that rely on external services.

@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "Software architecture serves as a blueprint for both the system and the project developing it, defining the work assignments that must be carried out by design and implementation teams. Java, with its robust ecosystem, object-oriented nature, and rich set of libraries, is frequently used for building complex applications with an emphasis on reliability and maintainability. Within the realm of software engineering, design patterns in Java are well-established solutions to common problems that arise during software development. Implementing these patterns facilitates the creation of software that is easier to understand, modify, and maintain."
 thumbnail: "/assets/images/gen/blog/singleton.png"
-image: "/assets/images/gen/blog/singleton.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 Design patterns in Java are typically divided into three categories: creational, structural, and behavioral. Creational patterns are concerned with the process of object creation, ensuring objects are created in a manner suitable to the situation while keeping the system independent of the specifics of object creation and type. Structural patterns focus on the composition of classes or objects, organizing systems in such a way that multiple parts work together more efficiently. Behavioral patterns deal with object interactions and responsibility, defining clear communication patterns between objects.

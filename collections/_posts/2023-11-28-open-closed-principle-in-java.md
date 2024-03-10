@@ -5,7 +5,7 @@ date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Adhere to the Open/Closed Principle in Java: design for extension, not modification, promoting scalable and maintainable software systems."
 thumbnail: "/assets/images/gen/blog/openclosed.png"
-image: "/assets/images/gen/blog/openclosed1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 The Open/Closed Principle (OCP) is one of the five SOLID principles of object-oriented programming. It is a design principle that states that software entities should be open for extension, but closed for modification. This means that classes, modules, functions, etc., should be designed in such a way that they can be extended to add new functionality, but without modifying the existing code. This principle promotes the creation of code that is more modular, flexible, and easier to maintain.

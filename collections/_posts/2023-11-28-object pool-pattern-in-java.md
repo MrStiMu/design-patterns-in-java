@@ -5,7 +5,7 @@ date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Boost Java appalication performance with the Object Pool pattern: efficiently manage and reuse objects for improved resource utilization."
 thumbnail: "/assets/images/gen/blog/objectpool.png"
-image: "/assets/images/gen/blog/objectpool.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 The Object Pool Pattern is a creational design pattern that is used in situations where the cost of creating an object is high. The pattern is used to manage a pool of objects that are kept ready to use. The objects in the pool are created in advance and are kept in the pool until they are needed. When an object is needed, it is taken from the pool and used. When the object is no longer needed, it is returned to the pool.
 

@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Java Design Patterns are essential for any software developer to learn and understand. Design patterns are reusable solutions to common problems that arise in software development. They provide a standardized approach to solving these problems and can help developers to write more efficient and maintainable code."
 thumbnail: "/assets/images/gen/blog/designpat.png"
-image: "/assets/images/gen/blog/designpat1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 Java Design Patterns are divided into four categories: creational, structural, behavioral, and concurrency. Each category has its own set of patterns that are designed to solve specific problems. Creational design patterns are concerned with the process of object creation, while structural design patterns deal with the composition of classes and objects. Behavioral design patterns focus on communication between objects and classes, and concurrency design patterns deal with multi-threaded programming.

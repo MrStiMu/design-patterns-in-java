@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "In software development, particularly in Java, the Arrange/Act/Assert (AAA) design pattern has become a standard for structuring tests. This pattern provides a clear and maintainable framework to write unit tests. Each test following AAA pattern consists of three distinct sections; the first one, 'Arrange', involves setting up the necessary objects and states before the actual test is performed. This setup includes the instantiation of classes, creation of mock data, and configuration of test doubles."
 thumbnail: "/assets/images/gen/blog/assert.webp"
-image: "/assets/images/gen/blog/assert1.webp"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 The 'Act' section is where the real action takes place. It is the core of the test, where a method or function is executed with the arranged conditions. The emphasis here is on the execution of a single action that will generate an outcome, which is later verified. This step is crucial as it simulates the behavior of a unit in a controlled environment to determine if it operates as expected.

@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "Design patterns in Java serve as a methodical approach to problem-solving, which eases the process of software development. They offer a catalog of tried-and-true solutions to common problems that arise in software design, thereby facilitating more maintainable, flexible, and understandable code. With design patterns, developers have the ability to leverage the collective expertise of seasoned software architects, ensuring that their solutions align with established best practices."
 thumbnail: "/assets/images/gen/blog/adv.png"
-image: "/assets/images/gen/blog/adv1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 One of the primary advantages of using design patterns in Java is the promotion of code reusability. These patterns provide templates that are sufficiently abstract to be applicable across a variety of applications, thereby reducing redundancy and accelerating the development process. For instance, a Singleton pattern ensures that a class has only one instance and provides a global point of access to it, which is especially useful in managing shared resources.

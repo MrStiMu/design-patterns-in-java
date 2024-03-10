@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "The Business Delegate Design Pattern is a Java EE design pattern that decouples the presentation and business tiers in an application. This pattern aims to reduce the coupling between clients and business services by introducing an intermediary layer called the Business Delegate. It helps in hiding the underlying implementation details of the business service layer, such as lookup and business service methods invocation. The Business Delegate acts as a client-side business abstraction, providing a stable interface to the underlying business services, thereby allowing for loose coupling and easy scalability."
 thumbnail: "/assets/images/gen/blog/bd.webp"
-image: "/assets/images/gen/blog/bd1.webp"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 In Java, utilizing design patterns like the Business Delegate simplifies the development of highly maintainable and scalable enterprise applications. When implemented correctly, the Business Delegate Pattern handles the complexity associated with remote method invocation, retries, and error handling, which are common aspects of remote service invocation. This offloads the clients from such concerns and presents an easier and more streamlined business method interface to them.

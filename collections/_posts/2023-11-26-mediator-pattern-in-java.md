@@ -5,7 +5,7 @@ date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Harmonize Java object interactions with the Mediator pattern: centralize communication for decoupled and scalable system design."
 thumbnail: "/assets/images/gen/blog/mediator.png"
-image: "/assets/images/gen/blog/mediator-2.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 The Mediator Design Pattern is one of the widely used behavioral patterns in Java. It provides a centralized communication medium between different objects in a system. The Mediator pattern encapsulates the way disparate sets of objects interact and communicate with each other, allowing loose coupling between them.
 

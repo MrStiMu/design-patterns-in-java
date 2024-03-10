@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "The Active Object Pattern is a design pattern used in concurrent programming to separate method execution from method invocation for objects that each reside in their own thread of control. The goal is to introduce concurrency by using asynchronous method invocation and a scheduler for handling requests. The pattern is used to provide a higher level of abstraction for concurrent programming, making it easier to develop and maintain complex systems."
 thumbnail: "/assets/images/gen/blog/active.png"
-image: "/assets/images/gen/blog/active2.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 Java is a popular programming language that supports the Active Object Pattern. In Java, the pattern is implemented using asynchronous method invocation and a scheduler for handling requests. Java developers use the pattern to develop complex systems that require concurrency. The Active Object Pattern is used extensively in Java development for developing high-performance, scalable, and reliable systems.

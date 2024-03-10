@@ -5,7 +5,7 @@ date: 2023-11-05T10:20:00Z
 categories: ["Creational"]
 description: "Elevate Java code robustness with the Null Object pattern: replace null references with neutral objects, reducing errors and enhancing maintainability."
 thumbnail: "/assets/images/gen/blog/null.png"
-image: "/assets/images/gen/blog/null1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 The Null Object Pattern is a design pattern that is used to simplify the use of dependencies that can be undefined. It is a special case of the Strategy Pattern that describes the uses of null objects and their behavior in the system. In most object-oriented languages such as Java, references may be null, which can cause issues when the code tries to access a method or property of a null object. The Null Object Pattern solves this problem by using instances of a concrete class that implements a known interface, instead of null references.
 

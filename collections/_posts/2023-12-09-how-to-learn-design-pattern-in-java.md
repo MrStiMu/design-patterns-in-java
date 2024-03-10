@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Design patterns are essential for software developers who want to create efficient and maintainable code. These patterns are reusable solutions to common programming problems that can save developers time and effort when designing software. Java is a popular programming language for software design and development, making it a great choice for learning design patterns."
 thumbnail: "/assets/images/gen/blog/guide1.png"
-image: "/assets/images/gen/blog/guide1.png"
+ad: "/assets/images/gen/blog/uad.jpg"
 ---
 
 Learning design patterns in Java can be a challenging but rewarding experience for developers. It requires a solid understanding of Java programming concepts and the ability to apply those concepts to real-world scenarios. Developers who are new to design patterns should start by learning the basics, such as the Singleton, Factory, and Observer patterns.
