@@ -17,6 +17,7 @@ Implementing the Singleton pattern in Java can be a bit tricky, as there are sev
 
 Here's an example where a **Logger** class is implemented as a Singleton
 
+
 ```java
 public class Logger {
     private static Logger instance;
