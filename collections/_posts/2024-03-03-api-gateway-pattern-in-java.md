@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "In modern software architecture, an API Gateway serves as a critical component, acting as a reverse proxy to accept all application programming interface (API) calls, aggregate the various services required to fulfill them, and return the appropriate result. This design pattern is particularly relevant in the context of microservices architecture where it simplifies the client by moving logic for calling multiple services from the client to the gateway. When implemented using Java, developers leverage the robustness of the language to manage concurrent requests, service discovery, and dynamic routing, all essential features for a scalable and efficient API gateway."
 thumbnail: "/assets/images/gen/blog/apig.webp"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The design of an API Gateway involves several key considerations, including authentication, monitoring, load balancing, and caching. Java provides a range of tools and frameworks such as Spring Cloud Gateway, which aid in creating gateways with these capabilities. Developers must integrate these features mindfully to ensure that the gateway efficiently manages traffic, secures services, and improves response times, thus enhancing the overall system's reliability and latency.

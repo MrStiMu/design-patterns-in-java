@@ -5,7 +5,7 @@ date: 2023-11-01T10:20:00Z
 categories: ["Creational"]
 description: "Craft flexible and step-by-step construction in Java with the Builder pattern: create complex objects effortlessly."
 thumbnail: "/assets/images/gen/blog/builder.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The Builder pattern is a creational design pattern that is widely used in Java. It allows developers to create complex objects step by step, without having to create multiple constructors with different parameters. By using the Builder pattern, developers can create objects with a large number of optional parameters in a more efficient and consistent way.

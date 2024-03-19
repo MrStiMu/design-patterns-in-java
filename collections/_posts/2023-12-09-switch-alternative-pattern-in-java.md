@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Java is a popular programming language that is widely used for developing various types of applications. Java Design Patterns are a set of best practices and guidelines that help developers to solve common problems in software development. One of the most common problems that developers face is the use of switch case statements in their code. Switch case statements can make the code difficult to read, maintain, and extend."
 thumbnail: "/assets/images/gen/blog/switch.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 One solution to this problem is to use Java Design Patterns instead of switch case statements. Java Design Patterns provide a more flexible and maintainable approach to solving this problem. There are several Design Patterns that can be used instead of switch case statements, such as the Strategy Pattern, the State Pattern, and the Command Pattern. These patterns provide a more modular and extensible approach to solving the problem of conditional statements in code.

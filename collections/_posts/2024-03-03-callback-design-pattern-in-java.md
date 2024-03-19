@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "The callback design pattern is a fundamental concept in programming that Java developers often utilize to create flexible and reusable code. In software design, a callback is a piece of executable code that is passed as an argument to other code, which is expected to execute the callback at a given point in time. The utilization of callbacks in Java allows for the design of applications that can handle asynchronous operations, enabling tasks to be performed in the background while the main program continues execution without blockage."
 thumbnail: "/assets/images/gen/blog/callback.webp"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 Java's rich set of features for handling callbacks mainly involves interfaces and anonymous classes, which have been a core part of the language since its early versions. Developers implement the callback design pattern by defining an interface with a method that serves as the callback, and then creating an instance of a class that implements this interface. This mechanism enhances the ability to decouple the execution of a task from the execution of the callback, thereby improving modularity and separation of concerns within the application.

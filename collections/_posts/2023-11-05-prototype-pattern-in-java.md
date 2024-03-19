@@ -5,7 +5,7 @@ date: 2023-09-13T10:20:00Z
 categories: ["Creational"]
 description: "Fuel Java innovation using the Prototype pattern: efficiently create and clone objects for dynamic and scalable application development."
 thumbnail: "/assets/images/gen/blog/prototype.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 The Prototype pattern is a creational design pattern that allows developers to create new objects by copying an existing instance, known as the prototype. This pattern is particularly useful when creating objects is a time-consuming and costly operation. By copying an existing object, developers can create new objects quickly and efficiently.
 

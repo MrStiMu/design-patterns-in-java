@@ -5,7 +5,7 @@ date: 2023-11-22T10:20:00Z
 categories: ["Creational"]
 description: "Expand Java code extensibility with the Visitor pattern: separate algorithms from objects, enabling dynamic operations for versatile designs."
 thumbnail: "/assets/images/gen/blog/visitor.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 The Visitor Design Pattern in Java is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code. This design pattern is part of the Gang of Four design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software. The Visitor pattern is particularly useful when you have a complex object structure and you want to perform operations on the elements of that structure.
 

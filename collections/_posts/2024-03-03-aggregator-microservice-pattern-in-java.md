@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "Aggregator Microservices Design Pattern is a structural pattern in the microservices architecture that acts as a gateway to aggregate data from multiple individual microservices. This design pattern is particularly useful when a client needs a unified response that is gathered from various services. In practice, the aggregator might be a separate microservice itself that makes use of synchronous HTTP requests to gather the required data. The Aggregator Pattern helps in reducing the number of calls made from the client side and abstracts the complexity of interacting with multiple microservices."
 thumbnail: "/assets/images/gen/blog/aggregator.webp"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 In Java, the implementation of the Aggregator Microservices Design Pattern relies on the language's robust set of libraries and frameworks that help in creating and orchestrating microservices. Some popular Java frameworks for building microservices include Spring Boot and Eclipse MicroProfile. Java's well-established ecosystem offers various tools for service discovery, communication, and resilience that are essential in managing the interactions between an aggregator service and the microservices from which it collects data.

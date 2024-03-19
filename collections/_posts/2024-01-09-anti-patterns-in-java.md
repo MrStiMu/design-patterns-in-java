@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "In the realm of software design, particularly within the Java ecosystem, design patterns and antipatterns serve as crucial signposts for developers navigating the complexities of creating maintainable and efficient applications. Design patterns provide proven solutions to common problems in software architecture, offering a template for best practices that help in creating scalable and robust systems. These patterns, such as Singleton, Observer, and Factory, are not exclusive to Java but are widely implemented in its vast landscape due to the language's design principles and extensive use in enterprise environments."
 thumbnail: "/assets/images/gen/blog/antipattern.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 Conversely, antipatterns represent common pitfalls that can lead to code that is difficult to understand, maintain, or extend. They are often the result of short-term thinking or a lack of awareness of better design alternatives. In Java development, cognizance of antipatterns like Spaghetti Code, which entangles logic and data within indecipherable blocks, or the God Object, which consolidates too many responsibilities within a single class, is essential. Understanding these antipatterns aids developers in refactoring existing codebases and prevents the accrual of technical debt.

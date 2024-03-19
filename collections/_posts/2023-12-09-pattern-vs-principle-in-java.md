@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Design patterns and design principles are two essential concepts in software engineering that are often used interchangeably. However, they have distinct meanings and purposes that are important to understand, especially when working with Java."
 thumbnail: "/assets/images/gen/blog/patprin.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 Design principles provide high-level guidelines for designing better software applications. They are not programming language-specific and do not provide implementation guidelines. Instead, they offer abstract principles that developers can apply to their code to make it more maintainable, extensible, and scalable. SOLID (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion) is an example of a set of design principles that can help developers create more robust and flexible code.

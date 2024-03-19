@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "Caching is a design pattern that aims to improve the performance of applications by temporarily storing repeatable data so that future requests for that data can be served faster. In the context of Java, implementing a caching mechanism can significantly reduce the amount of time it takes to access frequently requested data, which is particularly beneficial when dealing with expensive or time-consuming data retrieval processes, such as database transactions or network communications. By storing data in a cache, Java applications can reduce the workload on system resources, resulting in faster data access and improved overall efficiency."
 thumbnail: "/assets/images/gen/blog/caching.webp"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The core concept behind caching in Java revolves around storing a subset of data in a faster, more accessible layer that intercepts requests and serves data without the need to recompute or fetch it from the primary data store. This subset, or cache, is typically a small, in-memory store that provides quick data lookup capabilities. A well-designed cache not only accelerates data retrieval but also helps to maintain consistency and control over the data lifecycle, with mechanisms for invalidation, eviction, and synchronization.

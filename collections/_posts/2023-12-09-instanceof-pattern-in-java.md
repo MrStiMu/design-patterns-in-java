@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Java programming language is widely used in developing enterprise applications due to its robustness, scalability, and cross-platform compatibility. One of the key aspects of Java programming is design patterns, which are commonly used to solve recurring software development problems. However, when it comes to implementing design patterns in Java, developers often face the challenge of avoiding the use of the instanceof operator. This article will explore the reasons why developers should avoid using instanceof in Java design patterns and provide alternative solutions."
 thumbnail: "/assets/images/gen/blog/instanceof.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The instanceof operator is used in Java to test whether an object is an instance of a particular class or interface. While it can be useful in certain situations, it is generally considered to be bad practice to use instanceof in Java design patterns. One of the main reasons for this is that it violates the principles of object-oriented programming, particularly the open/closed principle. This principle states that software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. When developers use instanceof, they are essentially modifying code to accommodate new types of objects, rather than extending it.

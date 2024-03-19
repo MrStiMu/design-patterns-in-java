@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "The Data Transfer Object (DTO) pattern is a software design pattern used to transfer data between different layers of an application. The pattern is commonly used in Java applications to transfer data between the presentation layer, business layer, and persistence layer. The DTO pattern helps to reduce the number of method calls between the different layers of an application, which can improve performance and reduce network traffic."
 thumbnail: "/assets/images/gen/blog/dto.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 In Java, a DTO is a simple Java class that contains fields and getter and setter methods for accessing those fields. The DTO class is used to transfer data between different layers of an application, and it is typically used to transfer data from the persistence layer to the business layer, or from the business layer to the presentation layer. The DTO pattern is particularly useful when working with large datasets, as it allows developers to transfer only the data that is needed, rather than transferring the entire dataset.

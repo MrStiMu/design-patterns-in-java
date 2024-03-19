@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "Java developers often encounter situations where they need to make decisions based on certain conditions. Traditionally, they use if-else statements to handle such scenarios. However, as the number of conditions increase, the code complexity grows, making it difficult to maintain and debug. This is where Java Design Patterns come in handy."
 thumbnail: "/assets/images/gen/blog/singleton.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 Design patterns are reusable solutions to common programming problems. They provide a structured approach to solving problems and promote code reuse, flexibility, and maintainability. Java Design Patterns offer a set of best practices for designing and implementing software applications. They provide a framework for developers to create code that is easy to understand, maintain, and extend.

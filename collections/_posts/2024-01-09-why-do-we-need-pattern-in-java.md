@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "Design patterns in Java are essential tools for building robust and maintainable software. Java, as an object-oriented programming language, accommodates these patterns to resolve common design issues in a systematic and efficient manner. They offer general solutions, shaped by the cumulative experience of skilled software architects and developers, to recurring problems. This ensures that developers don't have to reinvent the wheel for each project; instead, they can employ these well-established best practices to streamline the development process."
 thumbnail: "/assets/images/gen/blog/why.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The use of design patterns in Java programming is widely recognized as a fundamental technique to enhance code readability and foster code reuse. Patterns such as Singleton, Factory, or Observer are not just theoretical concepts but practical solutions that have been proven effective in numerous applications. Each pattern provides a blueprint that can be adapted to a specific context, which simplifies complex design challenges and promotes design consistency across different parts of an application.

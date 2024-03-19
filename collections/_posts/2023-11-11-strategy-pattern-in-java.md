@@ -5,7 +5,7 @@ date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
 description: "Revolutionize Java flexibility with the Strategy pattern: dynamically switch algorithms for adaptable and high-performance solutions."
 thumbnail: "/assets/images/gen/blog/strategy.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 The Strategy Design Pattern is a popular design pattern used in object-oriented programming. It is a behavioral pattern that allows the behavior of an object to be selected at runtime. The Strategy pattern is based on the idea of encapsulating a family of algorithms into separate classes that implement a common interface. This makes it easy to switch between different algorithms at runtime, without having to change the code that uses them.
 

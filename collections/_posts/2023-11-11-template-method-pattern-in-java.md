@@ -5,7 +5,7 @@ date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
 description: "Refine Java code structure with the Template Method pattern: define skeletal algorithms, allowing flexibility in individual steps."
 thumbnail: "/assets/images/gen/blog/template-method.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 The Template Method Design Pattern is a popular behavioral design pattern in Java that defines the program skeleton of an algorithm in a method, but allows subclasses to modify certain steps without changing the structure of the algorithm. The overall sequence and structure of the algorithm are maintained by the parent class, while the details are left to be implemented by the child classes.
 

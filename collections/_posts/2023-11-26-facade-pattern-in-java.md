@@ -5,7 +5,7 @@ date: 2023-11-26T10:20:00Z
 categories: ["Creational"]
 description: "Simplify Java system complexities with the Facade pattern: provide a unified interface for a set of interfaces, making interactions more straightforward."
 thumbnail: "/assets/images/gen/blog/facade.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 The Facade design pattern is a structural design pattern that provides a simplified interface to a complex system of classes, interfaces, and objects. It is a widely used design pattern in Java that encapsulates a set of interfaces in a subsystem and provides a unified interface to the client. The Facade design pattern is a way to decouple the client from the subsystem, making it easier to use and maintain.
 

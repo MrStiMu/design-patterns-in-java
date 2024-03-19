@@ -5,7 +5,7 @@ date: 2023-11-11T10:20:00Z
 categories: ["Creational"]
 description: "Enhance Java code security and control with the Proxy pattern: efficiently manage access to objects for optimized performance."
 thumbnail: "/assets/images/gen/blog/proxy.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to create a wrapper around the main object's complexity from the client. The proxy pattern is used when we need to represent an object located remotely. Talking to the real object might involve marshalling and unmarshalling of data and talking to the remote object.

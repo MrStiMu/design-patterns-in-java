@@ -5,7 +5,7 @@ date: 2023-10-05T10:20:00Z
 categories: ["Creational"]
 description: "Unlock design versatility in Java with the Abstract Factory pattern: streamline object creation for a modular and efficient codebase."
 thumbnail: "/assets/images/gen/blog/abstract-factory.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The Abstract Factory Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is used when a system needs to be independent of how its objects are created and composed. It encapsulates a group of individual factories that have a common theme.

@@ -5,7 +5,7 @@ date: 2023-11-28T10:20:00Z
 categories: ["Creational"]
 description: "Achieve modularity and flexibility in Java with the Dependency Injection pattern: inject dependencies for loosely coupled and testable code."
 thumbnail: "/assets/images/gen/blog/dependency.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 Dependency Injection is a design pattern that is commonly used in Java-based applications. It is a programming technique that allows objects to be injected into classes at runtime, rather than being hardcoded into the class itself. This pattern is used to improve the flexibility, maintainability, and testability of an application.
 

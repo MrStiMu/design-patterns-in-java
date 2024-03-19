@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "In the evolving landscape of software development, the microservice architecture has risen as a proven paradigm, particularly favorable for complex, large-scale systems. This approach decomposes an application into a suite of small, independently deployable services, each running a unique process and communicating through lightweight mechanisms. Typically implemented along language and framework agnostic lines, microservices favor polyglot environments; however, Java remains a popular choice among them due to its robust ecosystem, mature frameworks, and widespread adoption in enterprise contexts."
 thumbnail: "/assets/images/gen/blog/micro1.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 To effectively manage microservices in Java, certain design patterns are frequently used to address common challenges such as service discovery, inter-service communication, data management, and fault tolerance. Architectural patterns like the API Gateway serve as the entry point that routes requests to the appropriate microservices. On the other hand, patterns such as Circuit Breaker are crucial for resilience, ensuring a service can handle unexpected failures gracefully. Each pattern addresses a specific aspect of system design, contributing to the overall robustness, scalability, and maintainability of the application.

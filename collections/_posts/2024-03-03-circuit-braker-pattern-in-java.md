@@ -5,7 +5,7 @@ date: 2024-03-03T10:20:00Z
 categories: ["Creational"]
 description: "In software engineering, the Circuit Breaker Design Pattern is a stability and resilience pattern that helps to prevent cascading failures in a distributed system. The concept, borrowed from the electrical engineering domain, allows a system to "trip" similar to an electrical circuit breaker to halt the flow of electricity after a fault is detected. When applied to Java applications, this pattern plays a crucial role in handling temporary failures while also preventing a system from attempting to perform an operation that's likely to fail. By monitoring for failures, once a failure threshold has been reached, the circuit breaker trips, and for the duration of a timeout period, all attempts to invoke the failing operation are automatically rejected. After the timeout expires, the circuit breaker allows a limited number of test requests to pass through to determine whether the underlying problem has been resolved."
 thumbnail: "/assets/images/gen/blog/circuit.webp"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The Circuit Breaker Design Pattern in Java consists of three primary states: Closed, Open, and Half-Open. In the Closed state, the application executes operations as requested. When errors occur to a specified threshold, the circuit breaker transitions to the Open state. In this state, the circuit breaker blocks all requests for a predetermined period, allowing time for the underlying issue to be fixed. The Half-Open state serves as a means to test the stability of the system; a limited number of requests are allowed through to check if the problem persists before fully reopening or closing the circuit.

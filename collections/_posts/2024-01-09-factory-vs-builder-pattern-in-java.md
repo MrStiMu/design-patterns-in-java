@@ -5,7 +5,7 @@ date: 2024-01-09T10:20:00Z
 categories: ["Creational"]
 description: "In the landscape of Java design patterns, the Builder and Factory patterns stand out as critical tools for object creation. These patterns belong to the category of creational design patterns, a group that primarily handles the process of object instantiation in software design. The Builder pattern is tailored for constructing complex objects step by step, while the Factory pattern is concerned with the creation of objects without exposing the instantiation logic to the client, providing a common interface to refer to the newly created object."
 thumbnail: "/assets/images/gen/blog/bvf.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 Understanding the nuances between the Builder and Factory patterns is essential for Java developers seeking to implement clean and maintainable code. The Factory pattern simplifies the creation process by delegating it to subclasses, which determine the type of object to be created. On the other hand, the Builder pattern gives more control over the construction process by separating the construction of a complex object from its representation, allowing for the production of different types and representations of an object from the same construction process.

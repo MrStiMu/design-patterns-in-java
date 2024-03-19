@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "The Balking Pattern is a software design pattern used in the Java programming language to ensure that an object executes an action only when it is in a particular state. This pattern is particularly useful when an object is in a state that is not appropriate for the requested action. In such cases, the object "balks" at the request and does not execute the action until it is in the correct state."
 thumbnail: "/assets/images/gen/blog/baking.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The Balking Pattern is one of several design patterns that are used to improve the quality of software. The pattern is useful in many different contexts, including file handling, network programming, and user interface design. The Balking Pattern is particularly useful in situations where the state of an object can change rapidly, as it allows developers to ensure that an object is in the correct state before executing an action.

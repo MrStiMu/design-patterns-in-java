@@ -5,7 +5,7 @@ date: 2023-12-09T10:20:00Z
 categories: ["Creational"]
 description: "The Data Access Object (DAO) pattern is a design pattern that separates the data persistence logic from the business logic. It is a structural pattern that provides an abstract interface to access the data from the database. The DAO pattern is widely used in Java-based applications to provide a simple and consistent way to access the data."
 thumbnail: "/assets/images/gen/blog/dao.png"
-ad: "/assets/images/gen/blog/uad.jpg"
+ad: "/assets/images/gen/blog/cfa.jpg"
 ---
 
 The DAO pattern allows developers to separate the data access logic from the business logic. This separation makes it easier to maintain and modify the code. The DAO pattern provides a layer of abstraction between the application and the database, which makes it possible to change the database without affecting the application code. This makes it easier to switch to a different database or upgrade to a new version of the database.
