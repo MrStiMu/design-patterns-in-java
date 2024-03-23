@@ -138,7 +138,7 @@ cookie_banner:
 analytics:
   google_analytics_id: "G-G69GSP6LJY" # G-XXXXXXXXXX
   gtm_id: "GTM-TM8DFFQ6" # GTM-XXXXXXXX
-  plausible_data_domain: "" # example: mywebsite.com
+  plausible_data_domain: "javadesignpatterns.com" # example: mywebsite.com
   umami_data_website_id: "" # example: "ddd14336-5fb0-4cdd-8f32-e1bfa906cc2b"
   umami_src: "" # "https://analytics.eu.umami.is/script.js"
 
