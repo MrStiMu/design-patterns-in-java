@@ -132,12 +132,12 @@ darkmode:
   show_dark_mode_toggle_in_mobile_menu: false # displays the dark mode toggle switch in the footer and allows the user to manually change the mode
 
 cookie_banner:
-  enabled: true
+  enabled: false
   show_manage_cookies_at_bottom: true
 
 analytics:
-  google_analytics_id: "G-G69GSP6LJY" # G-XXXXXXXXXX
-  gtm_id: "GTM-TM8DFFQ6" # GTM-XXXXXXXX
+  google_analytics_id: "G-" # G-XXXXXXXXXX
+  gtm_id: "" # GTM-XXXXXXXX
   plausible_data_domain: "javadesignpatterns.com" # example: mywebsite.com
   umami_data_website_id: "" # example: "ddd14336-5fb0-4cdd-8f32-e1bfa906cc2b"
   umami_src: "" # "https://analytics.eu.umami.is/script.js"
